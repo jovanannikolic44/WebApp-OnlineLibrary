@@ -1,8 +1,5 @@
 import mongoose from 'mongoose';
 
-
-// ovde se nalazi sve ono sto sadrzi moja sema u bazi
-
 const Schema = mongoose.Schema;
 
 let User = new Schema({
@@ -44,7 +41,7 @@ let User = new Schema({
     },
 },
     {
-        collection: 'users'  
-});
+        collection: 'users'
+    });
 
 export default mongoose.model('User', User);

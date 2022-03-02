@@ -13,9 +13,9 @@ let Book = new Schema({
     datumIzdavanja: {
         type: Date
     },
-    idZanra: [{                                     // maks tri zanra
+    idZanra: [{
         type: Schema.Types.ObjectId,
-        ref: 'Genre'     
+        ref: 'Genre'
     }],
     opis: {
         type: String
@@ -26,7 +26,7 @@ let Book = new Schema({
     brStrana: {
         type: String
     },
-    status:{
+    status: {
         type: String
     },
     urlSlike: {
@@ -34,7 +34,7 @@ let Book = new Schema({
     },
 },
     {
-        collection: 'books'  
-});
+        collection: 'books'
+    });
 
 export default mongoose.model('Book', Book);
