@@ -7,8 +7,8 @@ export interface Korisnik {
     drzava: string;
     mail: string;
     datumRodjenja: Date;
-    avatar: string,                 // url do slike, on se u bazi i cuva pod imenom avatar, a u delu za registraciju
-    status: string;                 // u servisu se postavlja na file koji je prosledjen putem input polja
-    stanjeAktivnosti: string;       // nakon toga se na serveru file cita iz req, to jest staza do fajla, ime fajla, ekstenzija...
+    avatar: string,                 // url to the image
+    status: string;
+    stanjeAktivnosti: string;
     tip: string;
 }                                   

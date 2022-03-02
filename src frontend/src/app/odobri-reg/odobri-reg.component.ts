@@ -9,17 +9,17 @@ import { KorisnikService } from '../korisnik.service';
 })
 export class OdobriRegComponent implements OnInit {
 
-  constructor(private ruter:Router, private servis:KorisnikService) { }
+  constructor(private ruter: Router, private servis: KorisnikService) { }
 
   displayedColumns: string[] = ['Profilna slika', 'Ime', 'Prezime', 'Username', 'Email', 'Grad', 'Datum rodjenja', 'Odobri'];
 
   ngOnInit(): void {
 
-    this.servis.korisniciCekaju().subscribe(kor=>{
+    this.servis.korisniciCekaju().subscribe(kor => {
       console.log(kor);
       this.sviKor = kor;
 
-      for(let i =0; i<this.sviKor.length; i++) {
+      for (let i = 0; i < this.sviKor.length; i++) {
         this.datumDate = new Date(this.sviKor[i].datumRodjenja);
         this.datumString = this.datumDate.toLocaleDateString();
         this.sviKor[i].datumRodjenja = this.datumString;
@@ -31,7 +31,7 @@ export class OdobriRegComponent implements OnInit {
   onPageChange(event) {
     let startIndex = event.pageIndex * event.pageSize;
     let endIndex = startIndex + event.pageSize;
-    if(endIndex > this.sviKor.length) {
+    if (endIndex > this.sviKor.length) {
       endIndex = this.sviKor.length
     }
     this.korNaStrani = this.sviKor.slice(startIndex, endIndex);
@@ -39,14 +39,14 @@ export class OdobriRegComponent implements OnInit {
 
   sviKor: any = [];
   korNaStrani: any = [];
-  prikazMenija:boolean=false;
+  prikazMenija: boolean = false;
   datumDate: Date = null;
   datumString: string = "";
 
 
   prikaziPadajuciMeni() {
-   
-    this.prikazMenija=!this.prikazMenija;
+
+    this.prikazMenija = !this.prikazMenija;
     console.log(this.prikazMenija);
   }
 
@@ -56,8 +56,7 @@ export class OdobriRegComponent implements OnInit {
     let datumDate = new Date(datum);
     let format = datumDate.toLocaleString();
     let ulogovan = JSON.parse(localStorage.getItem('korisnikUlogovan'));
-    console.log("ul");
-    console.log(ulogovan);
+
     this.servis.updateStatusaKorisnika(ulogovan, format).subscribe(upd => {
       console.log(upd);
     });
@@ -68,16 +67,9 @@ export class OdobriRegComponent implements OnInit {
   }
 
   odobri(kor) {
-    console.log(kor);
-   
-    console.log("id knjige koja se odobrava");
-    
-
     let indeks: number = this.sviKor.indexOf(kor);
-    console.log(indeks);
-    console.log(kor.username);
 
-    this.servis.odobriKorisnika(kor.username).subscribe(yes=>{
+    this.servis.odobriKorisnika(kor.username).subscribe(yes => {
       console.log(yes);
       this.sviKor.splice(indeks, 1);
       window.location.reload();

@@ -12,57 +12,43 @@ export class PretragaComponent implements OnInit {
   constructor(private ruter: Router) { }
 
   ngOnInit(): void {
-    // cim udjem u pretragu dohvatam rezultat pretrazenih knjiga
-    if(localStorage.getItem('nadjeneKnjige')==null) {
-      console.log("ovde2");
+    if (localStorage.getItem('nadjeneKnjige') == null) {
       this.pretrazeneKnjige = [];
       console.log("Nema nista u LS-u");
     }
     else {
       this.pretrazeneKnjige = JSON.parse(localStorage.getItem('nadjeneKnjige'));
-    
-      //this.nazivKnjige = this.pretrazeneKnjige[0].naziv;
-      console.log("pretrazene knjige");
-      console.log(this.pretrazeneKnjige);
-      
-      if(this.pretrazeneKnjige.length===0) {
-        // message
-        console.log("ovde");
+
+      if (this.pretrazeneKnjige.length === 0) {
         this.message = "Trazena knjiga ne postoji";
       }
       else {
-        console.log("ovde3");
         this.message = "";
       }
     }
   }
 
-  // Ovde dolazim svakako, bilo da unesem neku knjigu koja postoji u bazi ili knjigu koja ne postoji u bazi
-
-  pretrazeneKnjige : any = null;
-  message : string = "";
+  pretrazeneKnjige: any = null;
+  message: string = "";
   flag: string = "";
 
-  prikazMenija:boolean=false;
+  prikazMenija: boolean = false;
 
   prikaziPadajuciMeni() {
-   
-    this.prikazMenija=!this.prikazMenija;
+
+    this.prikazMenija = !this.prikazMenija;
     console.log(this.prikazMenija);
   }
 
-  prikazKnjige(k:Knjiga) {
-    console.log("pretraga knjige");
-    console.log(k);
-    
+  prikazKnjige(k: Knjiga) {
     this.flag = "ne";
 
-    // sacuvati flag
+    // save flag
     localStorage.setItem('flagOdobriti', JSON.stringify(this.flag));
-    // sacuvati selektovanu sliku u localStorage
+    // save selected image to localStorage
     localStorage.setItem('selektovanaKnjiga', JSON.stringify(k));
 
-    // rutirati na stranicu gde se prikazuje selektovana knjiga
+    // go to prikaz-knjige
     this.ruter.navigate(['/prikaz-knjige']);
   }
 }

@@ -133,7 +133,7 @@ h2 {
     color: white;
     text-align: center;
     border-radius: 5px;
-    cursor: pointer;                    /* bude ruka kad se predje preko dugmeta */
+    cursor: pointer;                    
     position: absolute;
     top:550px;
     left:160px;

@@ -9,30 +9,30 @@ import { KorisnikService } from '../korisnik.service';
 })
 export class PromeniTipComponent implements OnInit {
 
-  constructor(private ruter:Router, private servis:KorisnikService) { }
+  constructor(private ruter: Router, private servis: KorisnikService) { }
 
   displayedColumns: string[] = ['Profilna slika', 'Ime', 'Prezime', 'Username', 'Email', 'Tip', 'Promeni'];
-  
+
   ngOnInit(): void {
 
-    this.servis.sviSemAdmin().subscribe(users=>{
+    this.servis.sviSemAdmin().subscribe(users => {
       console.log(users);
       this.sviKorISaCekaju = users;
       let s = 0;
-      for(let i = 0; i<this.sviKorISaCekaju.length; i++) {
-        if(this.sviKorISaCekaju[i].status=="odobreno") {
+      for (let i = 0; i < this.sviKorISaCekaju.length; i++) {
+        if (this.sviKorISaCekaju[i].status == "odobreno") {
           this.sviKor[s] = this.sviKorISaCekaju[i];
           s++;
         }
       }
-      this.korNaStrani = this.sviKor.slice(0,5);
+      this.korNaStrani = this.sviKor.slice(0, 5);
     });
   }
 
   onPageChange(event) {
     let startIndex = event.pageIndex * event.pageSize;
     let endIndex = startIndex + event.pageSize;
-    if(endIndex > this.sviKor.length) {
+    if (endIndex > this.sviKor.length) {
       endIndex = this.sviKor.length
     }
     this.korNaStrani = this.sviKor.slice(startIndex, endIndex);
@@ -42,11 +42,11 @@ export class PromeniTipComponent implements OnInit {
   sviKor: any = [];
   korNaStrani: any = [];
 
-  prikazMenija:boolean=false;
+  prikazMenija: boolean = false;
 
   prikaziPadajuciMeni() {
-   
-    this.prikazMenija=!this.prikazMenija;
+
+    this.prikazMenija = !this.prikazMenija;
     console.log(this.prikazMenija);
   }
 
@@ -56,8 +56,6 @@ export class PromeniTipComponent implements OnInit {
     let datumDate = new Date(datum);
     let format = datumDate.toLocaleString();
     let ulogovan = JSON.parse(localStorage.getItem('korisnikUlogovan'));
-    console.log("ul");
-    console.log(ulogovan);
     this.servis.updateStatusaKorisnika(ulogovan, format).subscribe(upd => {
       console.log(upd);
     });
@@ -68,20 +66,19 @@ export class PromeniTipComponent implements OnInit {
   }
 
   promeniTip(kor) {
-    // Mogu da menjam tip samo odobrenim korisnicima..
     let username = kor.username;
     let trenutniTip = kor.tip;
     let menjamU;
-    
-    if(trenutniTip=="moderator") {
+
+    if (trenutniTip == "moderator") {
       menjamU = "korisnik";
     }
-    else if(trenutniTip == "korisnik") {
+    else if (trenutniTip == "korisnik") {
       menjamU = "moderator";
     }
 
     let indeks: number = this.sviKor.indexOf(kor);
-    this.servis.menjamTip(username, trenutniTip, menjamU).subscribe(user=>{
+    this.servis.menjamTip(username, trenutniTip, menjamU).subscribe(user => {
       console.log(user);
       this.sviKor[indeks].tip = menjamU;
     });

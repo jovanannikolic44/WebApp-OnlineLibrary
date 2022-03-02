@@ -9,16 +9,16 @@ import { KorisnikService } from '../korisnik.service';
 })
 export class ProfiliComponent implements OnInit {
 
-  constructor(private ruter:Router, private servis:KorisnikService) { }
+  constructor(private ruter: Router, private servis: KorisnikService) { }
 
   displayedColumns: string[] = ['Naziv knjige', 'Autori'];
   displayedColumns2: string[] = ['Naziv knjige', 'Autori', 'Ocena', 'Komentar'];
   displayedColumns3: string[] = ['Naziv desavanja', 'Status', 'Pocetak', 'Kraj'];
 
   ngOnInit(): void {
-    // ovo gost ne moze da vidi
+    // This can be seen by guest
 
-    if(localStorage.getItem('naProfilIdem')==null) {
+    if (localStorage.getItem('naProfilIdem') == null) {
       this.korisnik = null;
       console.log("Nema nista u LS-u");
     }
@@ -29,63 +29,56 @@ export class ProfiliComponent implements OnInit {
       this.datumDate = new Date(this.korisnik.datumRodjenja);
       this.datumString = this.datumDate.toLocaleDateString();
 
-        // sada deo sa procitanim knjigama
-      this.servis.dohvatiProcitaneKnjige(this.korisnik.username).subscribe(knjige=>{
+      // Books
+      this.servis.dohvatiProcitaneKnjige(this.korisnik.username).subscribe(knjige => {
         this.procitaneKnjige = knjige;
         this.pieChart();
-        this.proc = this.procitaneKnjige.slice(0,2);
+        this.proc = this.procitaneKnjige.slice(0, 2);
       });
 
-      this.servis.dohvatiTrenutnoSeCitaju(this.korisnik.username).subscribe(knjige=>{
+      this.servis.dohvatiTrenutnoSeCitaju(this.korisnik.username).subscribe(knjige => {
         this.trenutnoSeCitaju = knjige;
-        // console.log(this.trenutnoSeCitaju);
-        this.trc = this.trenutnoSeCitaju.slice(0,2);
+        this.trc = this.trenutnoSeCitaju.slice(0, 2);
       });
 
-      this.servis.dohvatiNaListi(this.korisnik.username).subscribe(knjige=>{
+      this.servis.dohvatiNaListi(this.korisnik.username).subscribe(knjige => {
         this.naListi = knjige;
-        // console.log(this.naListi);
-        this.lista = this.naListi.slice(0,2);
+        this.lista = this.naListi.slice(0, 2);
       });
 
-      // svi komentari ovog korisnika
-      this.servis.dohvatiSveKomentare(this.korisnik.username).subscribe(kom=>{
+      // Comments
+      this.servis.dohvatiSveKomentare(this.korisnik.username).subscribe(kom => {
         this.komentari = kom;
         console.log(this.komentari);
-        this.koment = this.komentari.slice(0,2);
+        this.koment = this.komentari.slice(0, 2);
       });
 
-      // javna desavanja
-      this.servis.dohvatiSvaJavnaDesavanjaUSistemu().subscribe(desavanja=> {  
-        this.javnaDesavanja = desavanja;  
-  
+      // Events
+      this.servis.dohvatiSvaJavnaDesavanjaUSistemu().subscribe(desavanja => {
+        this.javnaDesavanja = desavanja;
+
         length = this.javnaDesavanja.length;
-        for(let i = 0; i<length; i++) {
+        for (let i = 0; i < length; i++) {
           this.dateDesavanja[i] = new Date(this.javnaDesavanja[i].pocetak);
-          //console.log(this.dateDesavanja);
           this.dateKrajDesavanja[i] = new Date(this.javnaDesavanja[i].kraj);
-  
+
           this.pocetakDesavanja[i] = this.dateDesavanja[i].toLocaleString();
           this.javnaDesavanja[i].pocetak = this.pocetakDesavanja[i];
-          //console.log(this.pocetakDesavanja);
           this.krajDesavanja[i] = this.dateKrajDesavanja[i].toLocaleString();
           this.javnaDesavanja[i].kraj = this.krajDesavanja[i];
         }
-        this.desavanjaStr = this.javnaDesavanja.slice(0,2);
-      
-        console.log(this.javnaDesavanja); 
+        this.desavanjaStr = this.javnaDesavanja.slice(0, 2);
+
+        console.log(this.javnaDesavanja);
       });
 
     }
   }
 
   onPageChange(event) {
-    console.log("Page event");
-    console.log(event);
     let startIndex = event.pageIndex * event.pageSize;
     let endIndex = startIndex + event.pageSize;
-    if(endIndex > this.procitaneKnjige.length) {
-      // ako je endIndex veci od duzine celog mog niza sa podacima
+    if (endIndex > this.procitaneKnjige.length) {
       endIndex = this.procitaneKnjige.length
     }
     this.proc = this.procitaneKnjige.slice(startIndex, endIndex);
@@ -94,8 +87,7 @@ export class ProfiliComponent implements OnInit {
   onPageChange2(event) {
     let startIndex = event.pageIndex * event.pageSize;
     let endIndex = startIndex + event.pageSize;
-    if(endIndex > this.trenutnoSeCitaju.length) {
-      // ako je endIndex veci od duzine celog mog niza sa podacima
+    if (endIndex > this.trenutnoSeCitaju.length) {
       endIndex = this.trenutnoSeCitaju.length
     }
     this.trc = this.trenutnoSeCitaju.slice(startIndex, endIndex);
@@ -104,8 +96,7 @@ export class ProfiliComponent implements OnInit {
   onPageChange3(event) {
     let startIndex = event.pageIndex * event.pageSize;
     let endIndex = startIndex + event.pageSize;
-    if(endIndex > this.naListi.length) {
-      // ako je endIndex veci od duzine celog mog niza sa podacima
+    if (endIndex > this.naListi.length) {
       endIndex = this.naListi.length
     }
     this.lista = this.naListi.slice(startIndex, endIndex);
@@ -114,27 +105,23 @@ export class ProfiliComponent implements OnInit {
   onPageChange4(event) {
     let startIndex = event.pageIndex * event.pageSize;
     let endIndex = startIndex + event.pageSize;
-    if(endIndex > this.komentari.length) {
-      // ako je endIndex veci od duzine celog mog niza sa podacima
+    if (endIndex > this.komentari.length) {
       endIndex = this.komentari.length
     }
     this.koment = this.komentari.slice(startIndex, endIndex);
   }
 
   onPageChange6(event) {
-    console.log("Page event");
-    console.log(event);
     let startIndex = event.pageIndex * event.pageSize;
     let endIndex = startIndex + event.pageSize;
-    if(endIndex > this.javnaDesavanja.length) {
-      // ako je endIndex veci od duzine celog mog niza sa podacima
+    if (endIndex > this.javnaDesavanja.length) {
       endIndex = this.javnaDesavanja.length
     }
     this.desavanjaStr = this.javnaDesavanja.slice(startIndex, endIndex);
   }
 
 
-  pocetakDesavanja: string[]=[];
+  pocetakDesavanja: string[] = [];
   dateDesavanja: Date[] = [];
   krajDesavanja: string[] = [];
   dateKrajDesavanja: Date[] = [];
@@ -153,11 +140,11 @@ export class ProfiliComponent implements OnInit {
   lista: any = [];
   koment: any = [];
 
-  prikazMenija:boolean=false;
+  prikazMenija: boolean = false;
 
   prikaziPadajuciMeni() {
-   
-    this.prikazMenija=!this.prikazMenija;
+
+    this.prikazMenija = !this.prikazMenija;
     console.log(this.prikazMenija);
   }
 
@@ -167,8 +154,6 @@ export class ProfiliComponent implements OnInit {
     let datumDate = new Date(datum);
     let format = datumDate.toLocaleString();
     let ulogovan = JSON.parse(localStorage.getItem('korisnikUlogovan'));
-    console.log("ul");
-    console.log(ulogovan);
     this.servis.updateStatusaKorisnika(ulogovan, format).subscribe(upd => {
       console.log(upd);
     });
@@ -182,17 +167,10 @@ export class ProfiliComponent implements OnInit {
     this.ruter.navigate(['prikaz-knjige']);
   }
 
-  func(knjiga: any){
-    // prodjem kroz sve nizove knjiga dok ne nadjem poklapanje id-jeva prosledjene knjige i knjige koja je
-    // u nizu, i prosledim tu u nizu, zbog toga sto je uradjen populate zanra
-    // Knjige iz komentara su linkovi
-
+  func(knjiga: any) {
     let length1 = this.komentari.length;
-    for(let i = 0; i<length1; i++) {
-      if(this.komentari[i].idKnjige._id == knjiga.idKnjige._id) {
-        // prosledjujem samo this.komentari[i], a ne this.komentari[i].idKnjige, jer u this.komentari[i].idZanra imam
-        // nazive zanrova koje treba da ispisem, pa u prikaz-knjige pristupam ili idKnjige ili idZanra u zavisnosti
-        // sta mi treba
+    for (let i = 0; i < length1; i++) {
+      if (this.komentari[i].idKnjige._id == knjiga.idKnjige._id) {
         localStorage.setItem('selektovanaKnjiga', JSON.stringify(this.komentari[i]));
         this.ruter.navigate(['/prikaz-knjige']);
       }
@@ -205,7 +183,7 @@ export class ProfiliComponent implements OnInit {
   chartLabele: any[] = [];
   sviZanroviProcitanihKnjiga: string[] = [];
   sviZanrovi: any = [];
-  cnt : number[] = [];
+  cnt: number[] = [];
   z: any = null;
   ime: string[] = [];
   procenti: any[] = [];
@@ -213,53 +191,50 @@ export class ProfiliComponent implements OnInit {
 
   pieChart() {
 
-    console.log("Sve procitane knjige ovog korisnika");
-    console.log(this.procitaneKnjige);
-
     let length = this.procitaneKnjige.length;
     let s = 0;
-    
-    for(let i = 0; i<length; i++) {
+
+    for (let i = 0; i < length; i++) {
       let length2 = this.procitaneKnjige[i].idZanra.length;
-      for(let j = 0; j<length2; j++) {
+      for (let j = 0; j < length2; j++) {
         this.sviZanroviProcitanihKnjiga[s] = this.procitaneKnjige[i].idZanra[j].zanr;
         s++;
       }
     }
-   
-    for(let y = 0; y<this.sviZanroviProcitanihKnjiga.length; y++) {
+
+    for (let y = 0; y < this.sviZanroviProcitanihKnjiga.length; y++) {
       console.log(this.sviZanroviProcitanihKnjiga[y]);
-    
+
     }
 
-   
-    this.servis.dohvatiSveZanroveUSistemu().subscribe(zanrovi=>{
-      
+
+    this.servis.dohvatiSveZanroveUSistemu().subscribe(zanrovi => {
+
       this.z = zanrovi;
-      for(let p = 0; p<zanrovi.length; p++) {
+      for (let p = 0; p < zanrovi.length; p++) {
         this.sviZanrovi[p] = this.z[p].zanr;
       }
 
-      for(let k = 0; k<this.sviZanrovi.length; k++) {
-        this.cnt[k]=0;
-        this.ime[k]="";
+      for (let k = 0; k < this.sviZanrovi.length; k++) {
+        this.cnt[k] = 0;
+        this.ime[k] = "";
       }
-     
 
-      for(let i = 0; i<this.sviZanrovi.length; i++) {
-        for(let j = 0; j<this.sviZanroviProcitanihKnjiga.length; j++) {
-          if(this.sviZanroviProcitanihKnjiga[j]==this.sviZanrovi[i]){
+
+      for (let i = 0; i < this.sviZanrovi.length; i++) {
+        for (let j = 0; j < this.sviZanroviProcitanihKnjiga.length; j++) {
+          if (this.sviZanroviProcitanihKnjiga[j] == this.sviZanrovi[i]) {
             this.cnt[i]++;
             this.ime[i] = this.sviZanrovi[i];
           }
         }
       }
 
-      for(let r = 0; r<this.sviZanrovi.length; r++) {
-        this.procenti[r] = (this.cnt[r]/this.sviZanroviProcitanihKnjiga.length)*100;
+      for (let r = 0; r < this.sviZanrovi.length; r++) {
+        this.procenti[r] = (this.cnt[r] / this.sviZanroviProcitanihKnjiga.length) * 100;
       }
-      
-      // filtriram nizove od blanko karaktera
+
+      // filter blank characters
 
       let procenti2 = this.procenti.filter(function (el) {
         return el != "";
@@ -268,10 +243,10 @@ export class ProfiliComponent implements OnInit {
       let ime2 = this.ime.filter(function (el) {
         return el != "";
       });
-      
-      // prikaz procenata na dve decimale
+
+      // show % on two decimal places
       let procenti3 = [];
-      for(let q = 0; q<procenti2.length; q++) {
+      for (let q = 0; q < procenti2.length; q++) {
         procenti3[q] = procenti2[q].toFixed(2);
       }
 

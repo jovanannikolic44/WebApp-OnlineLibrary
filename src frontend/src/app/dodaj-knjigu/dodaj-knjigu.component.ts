@@ -13,7 +13,7 @@ export class DodajKnjiguComponent implements OnInit {
   constructor(private servis: KorisnikService, public fb: FormBuilder, private ruter: Router) { }
 
   ngOnInit(): void {
-    this.prikazMenija=false;
+    this.prikazMenija = false;
     this.servis.dohvatiSveZanroveUSistemu().subscribe(zanr => {
       this.sviZanrovi = zanr;
       console.log(this.sviZanrovi);
@@ -44,55 +44,46 @@ export class DodajKnjiguComponent implements OnInit {
   message: string = "";
   status: string = "";
 
-  prikazMenija:boolean;
+  prikazMenija: boolean;
 
   prikaziPadajuciMeni() {
-   
-    this.prikazMenija=!this.prikazMenija;
+
+    this.prikazMenija = !this.prikazMenija;
     console.log(this.prikazMenija);
   }
 
   uploadFile(event) {
     const file = event.target.files[0];
     this.slika = file;
-  
+
     this.form.patchValue({
       urlSlike: file
     });
     console.log('files');
 
     this.form.get('urlSlike').updateValueAndValidity()
-    
+
   }
 
   unesi() {
-   
-    if(this.nazivKnjige && this.autoriStr && this.datumIzdavanja && this.zanrovi && this.brStrana && this.opis) {
+
+    if (this.nazivKnjige && this.autoriStr && this.datumIzdavanja && this.zanrovi && this.brStrana && this.opis) {
       let lengthOfZanrovi = this.zanrovi.length;
-      if(lengthOfZanrovi>3) {
-        this.message="Dozvoljeno je uneti maksimalno tri zanra";
+      if (lengthOfZanrovi > 3) {
+        this.message = "Dozvoljeno je uneti maksimalno tri zanra";
       }
       else {
-        this.message="";
-
-        // ovde imam niz stringova, this.autori je string
+        this.message = "";
         this.autoriStr = this.autori.split(',');
         this.status = "cekanje";
-        
 
-
-        // OGRANICENJA AKO NEKA POLJA NISU UNETA
-        // sve je obavezno, osim slike
-
-        console.log("Sve uneto");
-        this.servis.idZanr(this.zanrovi).subscribe(z=>{
+        this.servis.idZanr(this.zanrovi).subscribe(z => {
           console.log(z);
-          this.servis.dodajKnjigu(this.nazivKnjige, this.autoriStr, this.datumIzdavanja, z, this.brStrana, this.opis, 
-            this.form.value.urlSlike, this.status).subscribe(knj=>{
-              console.log("nakon poziva servisa");
+          this.servis.dodajKnjigu(this.nazivKnjige, this.autoriStr, this.datumIzdavanja, z, this.brStrana, this.opis,
+            this.form.value.urlSlike, this.status).subscribe(knj => {
               console.log(knj);
               this.message = "Knjiga je uspesno uneta";
-          });
+            });
         });
       }
     }

@@ -9,7 +9,7 @@ import { KorisnikService } from '../korisnik.service';
 })
 export class PromenaLozinkeComponent implements OnInit {
 
-  constructor(private ruter:Router, private servis:KorisnikService) { }
+  constructor(private ruter: Router, private servis: KorisnikService) { }
 
   ngOnInit(): void {
   }
@@ -24,22 +24,19 @@ export class PromenaLozinkeComponent implements OnInit {
     console.log(this.staraL);
     console.log(this.novaLP);
     console.log(this.novaLD);
-    if(this.staraL == "" || this.novaLP == "" || this.novaLD == "" || this.staraL == null || this.novaLP == null || this.novaLD == null) {
+    if (this.staraL == "" || this.novaLP == "" || this.novaLD == "" || this.staraL == null || this.novaLP == null || this.novaLD == null) {
       this.message = "Niste popunili sva polja";
     }
     else {
-      if(this.novaLP === this.novaLD) {
-        // sve ok
-        console.log('ok');
+      if (this.novaLP === this.novaLD) {
+        // OK
         let lozinkaRegex = /^(([a-zA-Z])(?=.*\d)(?=.*[@$!%*#?&]).{7,})$/;
-        if(!lozinkaRegex.test(this.novaLP)){ 
+        if (!lozinkaRegex.test(this.novaLP)) {
           this.message = "Nova lozinka je u losem formatu";
-        }   
+        }
         else {
-          // servis
           this.servis.promeniLozinku(this.staraL, this.novaLD).subscribe(user => {
-            console.log('nakon poziva servisa');  // ovo ne ispisuje??
-            if(user['user']=='pogresna stara lozinka') {
+            if (user['user'] == 'pogresna stara lozinka') {
               this.message = "Pogresna stara lozinka";
             }
             else {
@@ -50,8 +47,6 @@ export class PromenaLozinkeComponent implements OnInit {
         }
       }
       else {
-        // ne poklapaju se unete nove lozinke
-        console.log('nove lozinke nisu iste');
         this.message = "Niste uneli iste nove lozinke";
       }
     }
