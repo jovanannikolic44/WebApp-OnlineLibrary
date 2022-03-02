@@ -1,0 +1,22 @@
+<header>
+    <nav>
+        <ul class="tabovi">
+            <li><a href="/registracija" class="tab">Registracija</a></li>
+            <li><a href="/gost" class="tab">Neregistrovani korisnik</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="forma">
+        <form>
+            <h2>Prijava</h2>
+            <input type="text" name="username" autocomplete="off" placeholder="Korisnicko ime" class="polja" [(ngModel)]="username">
+            <input type="password" name="sifra" autocomplete="off" placeholder="Lozinka" class="polja" [(ngModel)]="sifra">
+            <button class="dugme" (click)="prijaviSe()">Log in</button>
+        </form>
+    </div>
+    <span>
+        {{message}}
+    </span>
+</main>

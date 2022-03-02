@@ -1,0 +1,134 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+}
+
+/* ZAGLAVLJE */
+
+a {
+    color: black;
+}
+
+a:hover {
+    font-size: 23px;
+}
+
+header {
+    background-color: white;
+    opacity: 0.7;
+    width: 100%;
+    height: 70px;
+    margin: auto;
+    align-items: center;
+    font-weight: bold;
+}
+
+.linkovi {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 20px;
+}
+
+.link{
+    display: block;                 /* omogucava mi sa padding da pomeram koliki je razmak od pocetka header-a */
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding: 20px;
+}
+
+/* FORMA */
+
+h2 {
+    color: white;
+    opacity: 0.8;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.inputi {
+    opacity: 0.7;
+    padding: 8px;
+    margin-top: 7px;
+    width: 400px;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    border: none;
+}
+
+.mojaForma {
+    position: absolute;
+    top: 20%;                           
+    transform: translateX(120px);
+    max-width: 400px;                   
+    color: white;
+    opacity: 0.8;
+}
+
+.dugme {
+    padding: 15px;
+    margin-top: 20px;
+    background-color: black;
+    opacity: 0.8;
+    border: none;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;                    
+    position: relative;
+    transform: translateX(150px);
+}
+
+span {
+    position: absolute;
+    top: 96%;
+    color: white;
+    font-weight: bold;
+    transform: translateX(280px);
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 1300px) {
+    .mojaForma {
+        top: 20%;
+        transform: translateX(100px);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .mojaForma {
+        top: 20%;
+        transform: translateX(60px);
+    }
+    
+   
+}
+
+@media screen and (max-width: 560px) {
+    .mojaForma {
+        top: 20%;
+        transform: translateX(30px);
+    }
+    header {
+        width: 100%;
+    }
+}
+
+@media screen and (max-height: 300px) {
+    .mojaForma {
+        top: 30%;
+    }
+}
+
+@media screen and (max-height: 200px) {
+    .mojaForma {
+       top: 50%;
+    }
+}
+
+@media screen and (max-height: 100px) {
+    .mojaForma {
+        top: 100%;
+    }
+}

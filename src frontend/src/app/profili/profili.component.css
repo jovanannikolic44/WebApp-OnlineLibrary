@@ -1,0 +1,334 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+}
+
+/* MENI */
+.nav input[type="checkbox"] {
+    display: none;
+}
+
+/* pomeram meni */
+.nav {
+    position: absolute;
+    right:5% ;
+    width:180px;
+    top:0px;
+    padding: 10px;
+}
+
+#nav-icon {
+    font-size: 28px;
+    line-height: 50px;
+    padding-left: 1em;
+    color: black;
+}
+
+label {
+    width: 100%;
+    display: block;
+    z-index: 3;
+    position: relative;
+}
+
+
+.container li a:hover {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.container ul, .container li, label {
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-weight: 100;
+    width: 30%;
+    
+}
+
+.container ul {
+    
+    border-radius: 2px;
+}
+
+.container {
+    background-color: white;
+    position:absolute;
+    opacity: 0.7;
+    width:200px;
+    height:100px;
+    top:70px;
+    right:5%;
+    
+}
+.container li a {
+    line-height: 50px;
+    margin: 0;
+    padding: 0 0.25em;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+h2 {
+    padding: 10px;
+    color: black;
+    font-size: 25px;
+}
+
+.naslov {
+    position: absolute;
+    top:20px;
+    left:15%;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.sve {
+    display: flex;
+    background-color: white;
+    
+    opacity: 0.7;
+    border-bottom: 1px solid white;
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:110%;
+    height:70px;
+}
+
+
+/* OPSTE INFORMACIJE */
+
+.opsteInfoTabela {
+    position: relative;
+    top: 120px;
+    left: 60px;
+    color: white;
+    font-size: 17px;
+    opacity: 0.9;
+}
+
+.tr1, .td1 {
+    padding: 4px;
+}
+
+.imgDiv {
+    border-radius: 50%;
+}
+
+
+/* PROCITANE KNJIGE */
+
+.headerProc {
+    position: absolute;
+    top: 600px;
+    left: 120px;
+    color: white;
+}
+
+#tabelaProc {
+    position: absolute;
+    top: 700px;
+    left: 60px;
+}
+
+.th3, .td3 {
+    width: 200px;
+}
+
+/* a svaka svoj width? */
+tr, td {
+    width: 200px;
+}
+
+
+/* KNJIGE KOJE SE TRENUTNO CITAJU */
+
+.headerTr {
+    position: absolute;
+    top: 600px;
+    left: 650px;
+    color: white;
+}
+
+#tabelaTr {
+    position: absolute;
+    top: 700px;
+    left:550px;
+}
+
+.th2, .td2 {
+    width: 200px;
+}
+
+/* KNJIGE KOJE SU NA LISTI */
+
+.headerLista {
+    position: absolute;
+    top: 600px;
+    right: 200px;
+    color: white;
+}
+
+#tabelaLista {
+    position: absolute;
+    top: 700px;
+    right: 100px;
+}
+
+.th4, .td4 {
+    width: 200px;
+}
+
+/* JAVNA DESAVANJA */
+
+.headerDes {
+    position: absolute;
+    top: 1150px;
+    left:120px;
+    color: white;
+}
+
+#tabelaDes {
+    position: absolute;
+    top: 1250px;
+    left: 60px;
+    color: white;
+}
+
+
+/* KOMENTARI */
+
+.headerKom {
+    position: absolute;
+    top: 1600px;
+    left: 120px;
+    color: white;
+}
+
+#tabelaKom {
+    position: absolute;
+    top: 1700px;
+    left: 60px;
+    color: white;
+}
+
+.newLinks {
+    cursor: pointer;
+}
+
+.newLinks:hover {
+    font-size: 18px;
+}
+
+.th5, .td5 {
+    width: 200px;
+}
+
+/* PIE CHART */
+.chartPie {
+    width: 500px;
+    position: absolute;
+    top: 1150px;
+    right: 50px;
+    opacity: 1;
+}
+
+.prazan {
+    position: absolute;
+    top: 2300px;
+}
+
+
+
+@media screen and (max-width: 1500px) {
+  
+    .headerProc {
+        top: 1500px;
+    }
+
+    #tabelaProc {
+        top:1600px;
+    }
+
+    .headerDes {
+        top: 700px;
+    }
+
+    #tabelaDes {
+        top: 800px;
+    }
+
+    .chartPie {
+        top: 1100px;
+        left: 100px;
+    }
+
+    .headerKom {
+        top: 3200px;
+    }
+
+    #tabelaKom {
+        top:3300px;
+    }
+
+    .headerTr {
+        top: 2000px;
+        left: 120px;
+    }
+
+    #tabelaTr {
+        top: 2100px;
+        left: 60px;
+    }
+
+    .headerLista {
+        top: 2600px;
+        left:120px;
+    }
+
+    #tabelaLista {
+        top: 2700px;
+        left: 60px;
+    }
+    
+    .th4, .td4 {
+        width: 800px;
+    }
+
+    .prazan {
+        top: 3900px;
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+    .nav {
+        right: -40px;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .chartPie {
+        left:30px;
+    }
+
+    #tabelaKom {
+        left:0px;
+    }
+
+    #tabelaDes {
+        left: 0px;
+    }
+
+    .sve {
+        width: 120%;
+    }
+}

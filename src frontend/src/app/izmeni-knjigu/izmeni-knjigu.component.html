@@ -1,0 +1,104 @@
+<main>
+  <div class="sve">      
+  </div>
+  
+  <div class="naslov">
+      <h2>Sve knjige u sistemu</h2>
+
+  </div>
+  <div class="tabela">
+    <table>
+      <tr *ngFor = 'let y of sveKnjige'>
+
+          <td *ngIf = 'y.urlSlike == "default"'>
+
+              <div *ngIf='y.status=="odobreno"'>
+                  <img src = "assets/defBook.jpg" width = '100' height = '100' class='imgDiv'>
+              </div>
+              <div *ngIf='y.status=="cekanje"'>
+                  <img src = "assets/defBook.jpg" width = '100' height = '100' class='imgDiv2'>
+              </div>
+          </td>
+
+          <td *ngIf = 'y.urlSlike != "default"'>
+              <div *ngIf='y.status=="odobreno"'>
+                  <img [src]="y.urlSlike" width = '100' height = '100' class='imgDiv'>
+              </div>
+              <div *ngIf='y.status=="cekanje"'>
+                  <img [src]="y.urlSlike" width = '100' height = '100' class='imgDiv2'>
+              </div>
+          </td>
+
+
+          <td colspan="2"> 
+              {{y.naziv}} 
+              <br/>
+              {{y.autori}}
+              <br/>
+              <button class="dugme" (click) = 'f(y)'> Izmeni </button>
+              &nbsp;
+              <button class="dugme" (click) = 'prikazKnjige(y)'>Detaljnije</button>
+          </td>
+      </tr>
+    </table>
+  </div>
+
+  <div *ngIf = "flag==true">
+    <div class="mojaForma">
+      <form [formGroup]="form" (ngSubmit)="izmeni()">
+          Nov naziv knjige:
+          <input type="text" name="naziv" autocomplete="off" class="inputi" [(ngModel)]="nazivKnjige" [ngModelOptions]="{standalone: true}">
+          Novi autor(i):
+          <input type="text" name="autor" autocomplete="off" class="inputi" [(ngModel)]="autori" [ngModelOptions]="{standalone: true}">
+          Nov datum izdavanja: 
+          <input type="date" name="datumIzdavanja" class="inputi" [(ngModel)]="datumIzdavanja" [ngModelOptions]="{standalone: true}">
+          Nov broj strana:
+          <input type="text" name="brStr" autocomplete="off" class="inputi" [(ngModel)]="brStrana" [ngModelOptions]="{standalone: true}">
+          Nov opis:
+          <textarea [(ngModel)]="opis" [ngModelOptions]="{standalone: true}" class="inputi"></textarea>
+          
+          Novi zanrovi:
+          <select name='zanr' class='inputi' [(ngModel)]='zanrovi' [ngModelOptions]="{standalone: true}" multiple>
+              <option *ngFor = 'let j of sviZanrovi'>
+                  {{j.zanr}}
+              </option>
+          </select>
+
+          Nova slika naslovne strane:
+          <input type="file" name="slika" class="inputi" accept="image/*" (change)="uploadFile($event)">
+
+          <button class="dugme" type="submit">Izmeni knjigu</button>
+          
+      </form>
+      
+      <span>
+          {{message}}
+      </span> 
+    </div> 
+  </div>
+  
+</main>
+
+
+<!-- MENU -->
+<div class="nav">
+  <input type="checkbox" id="menu" (click)='prikaziPadajuciMeni()'>
+  <label for="menu" id = "nav-icon">&#9776;</label>
+
+</div>
+<div class="nav">
+  <input type="checkbox" id="menu" (click)='prikaziPadajuciMeni()'>
+  <label for="menu" id = "nav-icon">&#9776;</label>
+
+</div>
+<div *ngIf='prikazMenija==true' class="container">
+  <ul>
+      <li>
+          <a (click)="pocetnaStrana()">Pocetna&nbsp;strana</a>
+          
+      </li>
+      <li>
+          <a (click)="logOut()">Odjavi&nbsp;se</a>
+      </li>
+  </ul>
+</div>

@@ -1,0 +1,25 @@
+<main>
+    <div class="sve">      
+    </div>
+    
+    <div class="naslov">
+        <h2>
+            <a class="link" href="/reg-kor">Prethodna&nbsp;strana</a>
+        </h2>
+
+    </div>
+    <form class='mojaForma'>
+        <h2>Promena lozinke</h2>
+
+        <input type='password' name='staraL' class='inputi' placeholder='Stara lozinka' [(ngModel)]='staraL'>
+
+        <input type='password' name='novaLP' class='inputi' placeholder='Nova lozinka' [(ngModel)]='novaLP'>
+
+        <input type='password' name='novaLD' class='inputi' placeholder='Ponoviti unos nove lozinke' [(ngModel)]='novaLD'>
+
+        <button class='dugme' (click)='potvrda()'>Potvrditi promenu</button>
+    </form>
+    <span>
+        {{message}}
+    </span>
+</main>

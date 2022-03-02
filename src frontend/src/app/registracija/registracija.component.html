@@ -1,0 +1,45 @@
+<header>
+    <nav>
+        <ul class="linkovi">
+            <li><a href="/login" class="link">Prijava</a></li>
+            <li><a href="/gost" class="link">Neregistrovani korisnik</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="mojaForma">
+        <form [formGroup]="form" (ngSubmit)="registrujSe()">
+            <h2>Registracija</h2>
+            Ime:
+            <input type="text" name="ime" autocomplete="off" class="inputi" [(ngModel)]="ime" [ngModelOptions]="{standalone: true}">
+            Prezime:
+            <input type="text" name="prezime" autocomplete="off" class="inputi" [(ngModel)]="prezime" [ngModelOptions]="{standalone: true}">
+            Korisnicko ime: 
+            <input type="text" name="username" autocomplete="off" class="inputi" [(ngModel)]="username" [ngModelOptions]="{standalone: true}">
+            Lozinka:
+            <input type="password" name="sifra" autocomplete="off" class="inputi" [(ngModel)]="sifra" [ngModelOptions]="{standalone: true}">
+            Grad:
+            <input type="text" name="grad" autocomplete="off" class="inputi" [(ngModel)]="grad" [ngModelOptions]="{standalone: true}">
+            Drzava:
+            <input type="text" name="drzava" autocomplete="off" class="inputi" [(ngModel)]="drzava" [ngModelOptions]="{standalone: true}">
+            E-mail:
+            <input type="email" name="mail" autocomplete="off" class="inputi" [(ngModel)]="mail" [ngModelOptions]="{standalone: true}">
+            Datum rodjenja:
+            <input type="date" name="datumRodjenja" class="inputi" [(ngModel)]="datumRodjenja" [ngModelOptions]="{standalone: true}">
+            Slika profila:
+            <input type="file" name="slika" class="inputi" accept="image/*" (change)="uploadFile($event)">
+            <re-captcha (resolved)="resolved($event)" siteKey="6Lc7bb0ZAAAAADQwdpYyMkHEApLLJR96lkJz499W"></re-captcha>
+            <button class="dugme" type="submit">Registruj se</button>
+        </form>
+        <span>
+            {{message}}
+        </span>
+    </div>
+</main>
+
+
+
+
+
+                  

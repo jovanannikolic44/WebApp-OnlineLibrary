@@ -1,0 +1,798 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+    font-size: 15px;
+}
+
+/* MENI */
+
+
+.nav input[type="checkbox"] {
+    display: none;
+}
+
+/* pomeram meni */
+.nav {
+    position: absolute;
+    right:5% ;
+    width:180px;
+    top:0px;
+    padding: 10px;
+}
+
+#nav-icon {
+    font-size: 28px;
+    line-height: 50px;
+    padding-left: 1em;
+    color: black;
+}
+
+label {
+    width: 100%;
+    display: block;
+    z-index: 3;
+    position: relative;
+}
+
+
+/* KORISNIK */
+
+.container li a:hover {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.container ul, .container li, label {
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-weight: 100;
+    width: 30%;
+    
+}
+
+.container ul {
+    
+    border-radius: 2px;
+}
+
+.container {
+    background-color: white;
+    position:absolute;
+    opacity: 0.7;
+    width:210px;
+    height:100px;
+    top:70px;
+    right:5%;
+    
+}
+.container li a {
+    line-height: 50px;
+    margin: 0;
+    padding: 0 0.25em;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* MODERATOR */
+.container2 li a:hover {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.container2 ul, .container2 li, label {
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-weight: 100;
+    width: 30%;
+    
+}
+
+.container2 ul {
+    
+    border-radius: 2px;
+}
+
+.container2 {
+    background-color: white;
+    position:absolute;
+    opacity: 0.7;
+    width:290px;
+    height:170px;
+    top:70px;
+    right:5%;
+    
+}
+.container2 li a {
+    line-height: 50px;
+    margin: 0;
+    padding: 0 0.25em;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* ADMIN */
+.container3 li a:hover {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.container3 ul, .container3 li, label {
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-weight: 100;
+    width: 30%;
+    
+}
+
+.container3 ul {
+    
+    border-radius: 2px;
+}
+
+.container3 {
+    background-color: white;
+    position:absolute;
+    opacity: 0.7;
+    width:210px;
+    height:170px;
+    top:70px;
+    right:5%;
+    
+}
+.container3 li a {
+    line-height: 50px;
+    margin: 0;
+    padding: 0 0.25em;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* DALJE MENI */
+h2 {
+    padding: 10px;
+    color: black;
+    font-size: 25px;
+}
+
+.naslov {
+    position: absolute;
+    top:10px;
+    left:15%;
+
+}
+.sve {
+    display: flex;
+    background-color: white;
+    
+    opacity: 0.7;
+    border-bottom: 1px solid white;
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:70px;
+}
+
+
+/* GOST */
+
+.imgDiv {
+    border-radius: 8px;
+    margin-right: 30px;
+}
+
+.imgDiv2 {
+    border-radius: 8px;
+    margin-right: 30px;
+    filter: brightness(40%);
+}
+
+
+.tabela {
+    position: absolute;
+    top: 120px;
+    left: 60px;
+    color: white;
+}
+
+.tr1, .td1 {
+    padding: 4px;
+    max-width: 300px;
+}
+
+.headerKom2 {
+    position: absolute;
+    top: 600px;
+    left: 120px;
+    color: white;
+}
+
+#tabelaKom2 {
+    position: absolute;
+    top: 700px;
+    left: 60px;
+    color: white;
+}
+
+.th2, .td2 {
+    width: 400px;
+}
+
+.prazan1 {
+    position: absolute;
+    top: 1300px;
+}
+
+
+/* REGISTROVAN KORISNIK */
+
+/* Unos komentara */
+::placeholder {
+    padding: 5px;
+    color: black;
+    opacity: 1;
+    font-size: 20px;
+}
+
+.listZv li {
+    float: right;
+    color: #ddd;
+    padding: 10px 5px;
+}
+
+.listZv li:hover,
+.listZv li:hover ~ li, .listZv li.selected {
+    color: #ffd700;
+}
+
+.listZv {
+    display: inline-block;
+    list-style: none;
+}
+
+.zvezde {
+    position: absolute;
+    top: 500px;
+    left: 60px;
+    cursor: pointer;
+}
+
+#TA {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    opacity: 0.9;
+}
+
+#dugmeUnesiKom {
+    padding: 5px;
+    background-color: white;
+    opacity: 0.8;
+    color: black;
+    border: none;
+    width:90px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#messKom {
+    color: white;
+    opacity: 0.8;
+    font-size: 19px;
+    position: absolute;
+    top: 250px;
+}
+
+
+/* Ispis komentara */
+
+.headerKom3 {
+    position: absolute;
+    top: 800px;
+    left: 120px;
+    color: white;
+}
+
+#tabelaKom3 {
+    position: absolute;
+    top: 900px;
+    left: 60px;
+    color: white;
+}
+
+.th3, .td3 {
+    width: 350px;
+}
+
+.prazan {
+    position: absolute;
+    top: 1600px;
+}
+
+a {
+    color: white;
+    cursor: pointer;
+}
+
+a:hover {
+    color: white;
+    font-size: 17px;
+}
+
+/* Lista, procitane, trenutno se citaju */
+
+/* Dodaj na listu */
+#cekboks {
+    position: absolute;
+    right: 600px;
+    top: 300px;
+    height: 20px;
+    width: 20px;
+}
+
+.labela {
+    position: absolute;
+    right: 100px;
+    top: 285px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+/* Obrisi sa liste */
+#cekboks2 {
+    position: absolute;
+    right: 600px;
+    top: 350px;
+    height: 20px;
+    width: 20px;
+}
+
+.labela2 {
+    position: absolute;
+    right: 100px;
+    top: 335px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+/* Stavi na listu procitanih knjiga */
+#naL {
+    position: absolute;
+    right: 600px;
+    top: 400px;
+    height: 20px;
+    width: 20px;
+}
+
+.labela6 {
+    position: absolute;
+    right: 100px;
+    top: 387px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+/* Stavi na listu knjiga koje trenutno citas */
+
+#saL {
+    position: absolute;
+    right: 600px;
+    top: 450px;
+    height: 20px;
+    width: 20px;
+}
+
+.labela7 {
+    position: absolute;
+    right: 100px;
+    top: 438px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+/* Prikaz strana */
+
+.labela5 {
+    position: absolute;
+    right: -580px;
+    top: 490px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.labela3 {
+    position: absolute;
+    right: -580px;
+    top: 540px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.inputi {
+    position: absolute;
+    top: 540px;
+    right: -620px;
+    opacity: 1;
+    padding: 8px;
+    margin-top: 7px;
+    width: 60px;
+    height: 40px;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    border: none;
+}
+
+.labela4 {
+    position: absolute;
+    right: -780px;
+    top: 540px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+/* span */
+
+
+
+@media screen and (max-width: 1300px) {
+    .th2, .td2 {
+        width:300px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .th2, .td2 {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .th2, .td2 {
+        width: 150px;
+    }
+
+    #tabelaKom2 {
+        position: absolute;
+        top: 700px;
+        left: 0px;
+        color: white;
+    }
+
+    .headerKom2 {
+        position: absolute;
+        top: 600px;
+        left: 20px;
+        color: white;
+    }
+
+    .sve {
+        width: 120%;
+    }
+}
+
+
+
+@media screen and (max-width: 1300px) {
+    #cekboks, #cekboks2, #naL, #saL {
+        right: 300px;
+    }
+    #cekboks{
+        top: 300px;
+    }
+    #cekboks2 {
+        top: 350px;
+    }
+    #naL {
+        top: 400px;
+    }
+    #saL {
+        top: 450px;
+    }
+
+    .labela {
+        top:285px;
+    }
+    .labela2 {
+        top:340px;
+    }
+    .labela6 {
+        top: 385px;
+    }
+    .labela7 {
+        top:440px;
+    }
+    .labela, .labela2, .labela6, .labela7 {
+        right: -100px;
+    }
+
+    .labela5, .labela3 {
+        right: -600px;
+    }
+
+    .labela5 {
+        top: 500px;
+    }
+
+    .labela3 {
+        top:560px;
+    }
+
+    .inputi {
+        right: -700px;
+        top:560px;
+    }
+
+    .labela4 {
+        right: -800px;
+        top:560px;
+    }
+
+    .sve {
+        width:110%;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .th3, .td3 {
+        width: 250px;
+    }
+
+    #cekboks, #cekboks2, #naL, #saL {
+        right: 300px;
+    }
+    
+    .labela, .labela2, .labela6, .labela7 {
+        right: -80px;
+    }
+
+    .labela5, .labela3 {
+        right: -350px;
+        color: white;
+    }
+
+    .inputi {
+        right: -430px;
+    }
+
+    .labela4 {
+        right: -530px;
+        color: white;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .th3, .td3 {
+        width: 200px;
+    }
+    #tabelaKom3 {
+        top: 1300px;
+    }
+    .headerKom3 {
+        top:1200px;
+    }
+    
+    #cekboks, #cekboks2, #naL, #saL {
+        left: 100px;
+    }
+    #cekboks{
+        top: 800px;
+    }
+    #cekboks2 {
+        top: 850px;
+    }
+    #naL {
+        top: 900px;
+    }
+    #saL {
+        top: 950px;
+    }
+
+    .labela {
+        top:785px;
+    }
+    .labela2 {
+        top:834px;
+    }
+    .labela6 {
+        top: 884px;
+    }
+    .labela7 {
+        top:934px;
+    }
+    .labela, .labela2, .labela6, .labela7 {
+        left: 150px;
+        color: white;
+    }
+
+    .labela5, .labela3 {
+        left: 100px;
+    }
+
+    .labela5 {
+        top: 1000px;
+    }
+
+    .labela3 {
+        top:1060px;
+    }
+
+    .inputi {
+        left: 220px;
+        top:1060px;
+    }
+
+    .labela4 {
+        left: 300px;
+        top:1060px;
+    }
+
+    .sve {
+        width:130%;
+    }
+
+    .prazan {
+        position: absolute;
+        top: 2000px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .headerKom3 {
+        left: 10px;
+    }
+    #tabelaKom3 {
+        left:0px;
+    }
+    .th3, .td3 {
+        width: 150px;
+    }
+    .nav {
+        right: -50px;
+    }
+    .container2 {
+        right: -50px;
+        height: 150px; 
+    }
+    .container3 {
+        right: -50px;
+        height: 150px;
+    }
+    .zvezde {
+        left: 20px;
+    }
+
+}
+
+/*
+
+#cekboks {
+    position: absolute;
+    right: 600px;
+    top: 200px;
+    height: 20px;
+    width: 20px;
+}
+
+.labela {
+    position: absolute;
+    right: 100px;
+    top: 185px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+
+#cekboks2 {
+    position: absolute;
+    right: 600px;
+    top: 250px;
+    height: 20px;
+    width: 20px;
+}
+
+.labela2 {
+    position: absolute;
+    right: 100px;
+    top: 235px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+
+#naL {
+    position: absolute;
+    right: 600px;
+    top: 300px;
+    height: 20px;
+    width: 20px;
+}
+
+.labela6 {
+    position: absolute;
+    right: 100px;
+    top: 287px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+
+
+#saL {
+    position: absolute;
+    right: 600px;
+    top: 350px;
+    height: 20px;
+    width: 20px;
+}
+
+.labela7 {
+    position: absolute;
+    right: 100px;
+    top: 338px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+
+
+.labela5 {
+    position: absolute;
+    right: -580px;
+    top: 390px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.labela3 {
+    position: absolute;
+    right: -580px;
+    top: 440px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.inputi {
+    position: absolute;
+    top: 440px;
+    right: -620px;
+    opacity: 1;
+    padding: 8px;
+    margin-top: 7px;
+    width: 60px;
+    height: 40px;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    border: none;
+}
+
+.labela4 {
+    position: absolute;
+    right: -780px;
+    top: 440px;
+    font-size: 19px;
+    font-weight: 500;
+}*/

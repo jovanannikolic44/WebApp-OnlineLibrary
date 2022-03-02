@@ -1,0 +1,93 @@
+<main>
+    <div class="sve">      
+    </div>
+    
+    <div class="naslov">
+        <h2>Dobro dosli</h2>
+
+    </div>
+
+<div class="mojaForma">
+    <form>
+        <input type='text' autocomplete='off' name='nazivKnjige' placeholder='Pretrazi knjige po nazivu' class='inputi' [(ngModel)]='imeKnjige'>
+        <input type='text' autocomplete='off' name='autorKnjige' placeholder='Pretrazi knjige po autoru' class='inputi' [(ngModel)]='autorKnjige'>
+        <select name='izabranZanr' class='inputi2' [(ngModel)]='izabranZanr'>
+            <option *ngFor = 'let j of sviZanrovi'>
+                {{j.zanr}}
+            </option>
+        </select>
+    </form>
+    <button class='dugme' (click)='pretrazi()'> Pretrazi </button>
+    <span>
+        {{message}}
+    </span>
+</div>
+
+
+
+    <h2 class="headerDes">
+        Javna&nbsp;desavanja
+    </h2>
+
+    <div class="mat-elevation-z8" id="tabelaDes">
+    
+        <table mat-table [dataSource]="javnaDesavanja">
+    
+        <ng-container matColumnDef="Naziv desavanja">
+            <th mat-header-cell *matHeaderCellDef> Naziv desavanja </th>
+            <td mat-cell *matCellDef="let element"> 
+                {{element.naziv}} 
+            </td>
+        </ng-container>
+    
+        
+        <ng-container matColumnDef="Status">
+            <th mat-header-cell *matHeaderCellDef> Status </th>
+            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Pocetak">
+            <th mat-header-cell *matHeaderCellDef> Pocetak </th>
+            <td mat-cell *matCellDef="let element"> {{element.pocetak}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Kraj">
+            <th mat-header-cell *matHeaderCellDef> Kraj </th>
+            <td mat-cell *matCellDef="let element"> {{element.kraj}} </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns3"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns3;"></tr>
+        </table>
+    </div>
+
+    <div class="prazan">
+        &nbsp;
+        <br/>
+        <br/>
+    </div>
+
+</main>
+
+<!-- MENU -->
+<div class="nav">
+    <input type="checkbox" id="menu" (click)='prikaziPadajuciMeni()'>
+    <label for="menu" id = "nav-icon">&#9776;</label>
+
+</div>
+<div class="nav">
+    <input type="checkbox" id="menu" (click)='prikaziPadajuciMeni()'>
+    <label for="menu" id = "nav-icon">&#9776;</label>
+
+</div>
+<div *ngIf='prikazMenija==true' class="container">
+    <ul>
+        <li>
+            <a href='/registracija'>Registracija</a>
+            
+        </li>
+        <li>
+            <a href='/login'>Prijava</a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,372 @@
+<main>
+    <div class="sve">      
+    </div>
+    
+    <div class="naslov">
+        <h2>Prikaz knjige</h2>
+    </div>
+  
+    <!-- GOST -->
+    <div *ngIf = 'ulogovanKorisnik=="gost" || odobriti == "prikazi" || odobriti=="prikazi"'>
+        <table class="tabela">
+            <tr class="tr1">
+                <td *ngIf = 'knjigaZaPrikaz.urlSlike == "default"' class="td1">
+                    <div *ngIf='knjigaZaPrikaz.status=="odobreno"'>
+                        <img src = "assets/defBook.jpg" width = '100' height = '100'class='imgDiv'>
+                    </div>
+                    <div *ngIf='knjigaZaPrikaz.status=="cekanje"'>
+                        <img src = "assets/defBook.jpg" width = '100' height = '100'class='imgDiv2'>
+                    </div>
+                </td>
+                <td *ngIf = 'knjigaZaPrikaz.urlSlike != "default"' class="td1">
+                    <div *ngIf='knjigaZaPrikaz.status=="odobreno"'>
+                        <img [src]="knjigaZaPrikaz.urlSlike" width = '100' height = '100' class='imgDiv'>
+                    </div>
+                    <div *ngIf='knjigaZaPrikaz.status=="cekanje"'>
+                        <img [src]="knjigaZaPrikaz.urlSlike" width = '100' height = '100' class='imgDiv2'>
+                    </div>
+                </td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">Naziv knjige: </td>
+                <td class="td1">{{knjigaZaPrikaz.naziv}}</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">Autori: </td>
+                <td class="td1">{{knjigaZaPrikaz.autori}}</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">Datum izadavnja: </td>
+                <td class="td1">{{datumIzdavanja}}</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">Zanrovi:</td>
+                <td class="td1">
+                    {{spojeniZanrovi}}
+                </td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">Broj strana:</td>
+                <td class="td1">{{knjigaZaPrikaz.brStrana}}</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">Opis knjige: </td>
+                <td class="td1">{{knjigaZaPrikaz.opis}}</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1"> Prosecna ocena knjige: </td>
+                <td class="td1">{{knjigaZaPrikaz.prosecnaOcena}}</td>
+            </tr>
+        </table>
+
+        <div *ngIf = 'tipUlogovanogKorisnika!="admin"'>
+            <h2 class="headerKom2">
+                Komentari
+            </h2>
+
+            <div class="mat-elevation-z8" id="tabelaKom2">
+                <table mat-table [dataSource]="koment">
+            
+                <ng-container matColumnDef="Korisnik">
+                    <th mat-header-cell *matHeaderCellDef class="th2"> Korisnik </th>
+                    <td mat-cell *matCellDef="let element; let i = index" class="td2"> Korisnik{{i+1}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Ocena">
+                    <th mat-header-cell *matHeaderCellDef class="th2"> Ocena </th>
+                    <td mat-cell *matCellDef="let element" class="td2"> {{element.Ocena}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Komentar">
+                    <th mat-header-cell *matHeaderCellDef class="th2"> Komentar </th>
+                    <td mat-cell *matCellDef="let element" class="td2"> {{element.tekstKom}} </td>
+                </ng-container>
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumns3"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns3;"></tr>
+                </table>
+            
+                <mat-paginator [length]="komentari.length"
+                    [pageSize]="5" [pageSizeOptions]="[5,10,15]" (page)="onPageChange5($event)">
+
+                </mat-paginator>
+            </div>
+        </div>
+        <div *ngIf='tipUlogovanogKorisnika=="admin"'>
+            <h2 class="headerKom2">
+                Komentari
+            </h2>
+
+            <div class="mat-elevation-z8" id="tabelaKom2">
+                <table mat-table [dataSource]="koment">
+            
+                <ng-container matColumnDef="Korisnik">
+                    <th mat-header-cell *matHeaderCellDef class="th2"> Korisnik </th>
+                    <td mat-cell *matCellDef="let element; let i = index" class="td2"> {{element.idKor.username}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Ocena">
+                    <th mat-header-cell *matHeaderCellDef class="th2"> Ocena </th>
+                    <td mat-cell *matCellDef="let element" class="td2"> {{element.Ocena}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Komentar">
+                    <th mat-header-cell *matHeaderCellDef class="th2"> Komentar </th>
+                    <td mat-cell *matCellDef="let element" class="td2"> {{element.tekstKom}} </td>
+                </ng-container>
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumns3"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns3;"></tr>
+                </table>
+            
+                <mat-paginator [length]="komentari.length"
+                    [pageSize]="5" [pageSizeOptions]="[5,10,15]" (page)="onPageChange5($event)">
+
+                </mat-paginator>
+            </div>
+        </div>
+        
+        <div class="prazan1">
+            &nbsp;
+            <br/>
+            <br/>
+        </div>
+    </div>
+
+    <!-- KRAJ DELA ZA GOSTA -->
+
+
+    <!-- REGISTOVANI KORISNIK -->
+    <div *ngIf = 'ulogovanKorisnik!="gost"  && odobriti=="ne"'>
+        <table class="tabela">
+            <tr class="tr1">
+                <td *ngIf = 'knjigaZaPrikaz.idKnjige.urlSlike == "default"' class="td1">
+                    <div *ngIf='knjigaZaPrikaz.idKnjige.status=="odobreno"'>
+                        <img src = "assets/defBook.jpg" width = '100' height = '100'class='imgDiv'>
+                    </div>
+                    <div *ngIf='knjigaZaPrikaz.idKnjige.status=="cekanje"'>
+                        <img src = "assets/defBook.jpg" width = '100' height = '100'class='imgDiv2'>
+                    </div>
+                </td>
+                <td *ngIf = 'knjigaZaPrikaz.idKnjige.urlSlike != "default"' class="td1">
+                        <div *ngIf='knjigaZaPrikaz.idKnjige.status=="odobreno"'>
+                            <img [src]="knjigaZaPrikaz.idKnjige.urlSlike" width = '100' height = '100' class='imgDiv'>
+                        </div>
+                        <div *ngIf='knjigaZaPrikaz.idKnjige.status=="cekanje"'>
+                            <img [src]="knjigaZaPrikaz.idKnjige.urlSlike" width = '100' height = '100' class='imgDiv2'>
+                        </div>
+                </td>
+            </tr>
+
+            <tr class="tr1">
+                <td class="td1">Naziv knjige: </td>
+                <td class="td1">{{knjigaZaPrikaz.idKnjige.naziv}}</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">Autori: </td>
+                <td class="td1">{{knjigaZaPrikaz.idKnjige.autori}}</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">Datum izadavnja: </td>
+                <td class="td1">{{datumIzdavanja}}</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">Zanrovi:</td>
+                <td class="td1">{{spojeniZanrovi}}</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">Broj strana:</td>
+                <td class="td1">{{knjigaZaPrikaz.idKnjige.brStrana}}</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">Opis knjige: </td>
+                <td class="td1">{{knjigaZaPrikaz.idKnjige.opis}}</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1"> Prosecna ocena knjige: </td>
+                <td class="td1">{{knjigaZaPrikaz.idKnjige.prosecnaOcena}}</td>              
+            </tr>
+        </table>
+
+
+        <form>
+            <div class="zvezde">
+                <table> 
+                    <tr>
+                        <td>
+                            <textarea (keyup)="textA()" id="TA" [disabled]="cnt>1001" placeholder="Unesite komentar"
+                                rows = "5" cols = "60"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul class="listZv" *ngFor = 'let star of zvezde' style="display: inline-block">
+                                <li (click)="izbrojZvezde(star)" [ngClass]="{'selected': (star<=selectedNumber)}">
+                                    <i class="fa fa-star"></i>
+                                </li>
+
+                            </ul>        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button (click)="unesiKom()" id="dugmeUnesiKom">Unesi komentar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span id="messKom">
+                                {{message2}}
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+
+        <h2 class="headerKom3">
+            Komentari
+        </h2>
+
+        <div class="mat-elevation-z8" id="tabelaKom3">
+            <table mat-table [dataSource]="koment">
+        
+            <ng-container matColumnDef="Korisnik">
+                <th mat-header-cell *matHeaderCellDef class="th3"> Korisnik </th>
+                <td mat-cell *matCellDef="let element;" class="td3"> 
+                    <a (click)="naProfil(element)" class='newLinks'>{{element.idKor.username}}</a>    
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Ocena">
+                <th mat-header-cell *matHeaderCellDef class="th3"> Ocena </th>
+                <td mat-cell *matCellDef="let element" class="td3"> {{element.Ocena}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Komentar">
+                <th mat-header-cell *matHeaderCellDef class="th3"> Komentar </th>
+                <td mat-cell *matCellDef="let element" class="td3"> {{element.tekstKom}} </td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns3"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns3;"></tr>
+            </table>
+        
+            <mat-paginator [length]="komentari.length"
+                [pageSize]="5" [pageSizeOptions]="[5,10,15]" (page)="onPageChange5($event)">
+            </mat-paginator>
+        </div>
+        
+        <div class="prazan">
+            &nbsp;
+            <br/>
+            <br/>
+        </div>
+        
+        <div *ngIf = 'knjigaZaPrikaz.idKnjige.status == "odobreno"'>
+            <form>
+                <!-- Dodaj na listu -->
+                <input type="checkbox"  value="true" [(ngModel)]="naListu" id="cekboks"
+                [ngModelOptions]="{standalone: true}" (click)="staviNaListu()"> 
+                <label class='labela'>
+                    Dodaj&nbsp;na&nbsp;listu
+                </label>
+
+                <!-- Obrisi sa liste -->
+                <input type="checkbox"  value="true" [(ngModel)]="saListe" id="cekboks2"
+                [ngModelOptions]="{standalone: true}" (click)="obrisiSaListe()"> 
+                <label class='labela2'>
+                    Obrisi&nbsp;sa&nbsp;liste
+                </label>
+
+                <!-- Stavi na listu procitanih knjiga -->
+                <input type="checkbox"  value="true" [(ngModel)]="statusCitanja" id="naL"
+                [ngModelOptions]="{standalone: true}" (click)="citanje()"> 
+                <label class='labela6'>
+                    Procitao/la&nbsp;knjigu
+                </label>
+    
+                <!-- Stavi na listu da trenutno citas -->
+                <input type="checkbox"  value="true" [(ngModel)]="statusCitanjaTrCita" id="saL"
+                [ngModelOptions]="{standalone: true}" (click)="citanje2()"> 
+                <label class='labela7'>
+                    Trenutno&nbsp;citam
+                </label>
+
+                <!-- Prikaz strana -->
+                <label *ngIf='statusCitanjaTrCita==true'>
+                    <label class="labela5">Stigli&nbsp;ste&nbsp;do&nbsp;{{stigaoJeDo}}&nbsp;strane</label>
+                    <label class="labela3">Broj&nbsp;strana: </label>
+                    <input type="text" name="brProcStrana" class="inputi" [(ngModel)]="brProcitanihStrana"
+                    [ngModelOptions]="{standalone: true}" id="tekst" (change)="realFunc()"> 
+                    <label class="labela4"> /&nbsp;{{knjigaZaPrikaz.idKnjige.brStrana}}</label>
+                </label>    
+            </form>
+        </div>
+
+
+    </div>
+
+</main>
+
+<div class="nav">
+    <input type="checkbox" id="menu" (click)='prikaziPadajuciMeni()'>
+    <label for="menu" id = "nav-icon">&#9776;</label>
+  
+  </div>
+  
+  <div *ngIf = 'ulogovanKorisnik!="gost"'>
+      <div *ngIf='tipUlogovanogKorisnika=="korisnik"'>
+            <div *ngIf='prikazMenija==true' class="container">
+                <ul>
+                    <li>
+                        <a (click)="nazad()">Pocetna&nbsp;strana</a>
+                    </li>
+                    <li>
+                        <a (click)="logOut()">Odjavi&nbsp;se</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div *ngIf = 'tipUlogovanogKorisnika=="moderator"'>
+            <div *ngIf='prikazMenija==true' class="container2">
+                <ul>
+                    <li>
+                        <a (click)="nazad()">Pocetna&nbsp;strana</a>
+                    </li>
+                    <li><a (click)="nazadNaOdb()">Nazad&nbsp;na&nbsp;odobravanje</a></li>
+                    <li>
+                        <a (click)="logOut()">Odjavi&nbsp;se</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div *ngIf='tipUlogovanogKorisnika=="admin"'>
+            <div *ngIf='prikazMenija==true' class="container3">
+                <ul>
+                    <li>
+                        <a (click)="nazad()">Pocetna&nbsp;strana</a>
+                    </li>
+                    <li><a (click)="nazadNaIzm()">Nazad&nbsp;na&nbsp;izmenu</a></li>
+                    <li>
+                        <a (click)="logOut()">Odjavi&nbsp;se</a>
+                    </li>
+                </ul>
+            </div>
+       </div>
+    </div>
+
+
+    <div *ngIf = 'ulogovanKorisnik=="gost"'>
+        <div *ngIf='prikazMenija==true' class="container">
+            <ul>
+                <li>
+                    <a href='/pretraga'>Prethodna&nbsp;strana</a>
+                </li>
+                <li>
+                    <a href='/registracija'>Registracija</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+ 

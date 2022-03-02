@@ -1,0 +1,70 @@
+<main>
+    <div class="sve">      
+    </div>
+    
+    <div class="naslov">
+        <h2>Dodaj knjigu</h2>
+
+    </div>
+    <div class="mojaForma">
+        <form [formGroup]="form" (ngSubmit)="unesi()">
+            Naziv knjige:
+            <input type="text" name="naziv" autocomplete="off" class="inputi" [(ngModel)]="nazivKnjige" [ngModelOptions]="{standalone: true}">
+            Autor(i):
+            <input type="text" name="autor" autocomplete="off" class="inputi" [(ngModel)]="autori" [ngModelOptions]="{standalone: true}">
+            Datum izdavanja: 
+            <input type="date" name="datumIzdavanja" class="inputi" [(ngModel)]="datumIzdavanja" [ngModelOptions]="{standalone: true}">
+            Broj strana:
+            <input type="text" name="brStr" autocomplete="off" class="inputi" [(ngModel)]="brStrana" [ngModelOptions]="{standalone: true}">
+            Opis:
+            <textarea [(ngModel)]="opis" [ngModelOptions]="{standalone: true}" class="inputi"></textarea>
+            
+            Zanrovi:
+            <select name='zanr' class='inputi' [(ngModel)]='zanrovi' [ngModelOptions]="{standalone: true}" multiple>
+                <option *ngFor = 'let j of sviZanrovi'>
+                    {{j.zanr}}
+                </option>
+            </select>
+
+            Slika naslovne strane:
+            <input type="file" name="slika" class="inputi" accept="image/*" (change)="uploadFile($event)">
+
+            <button class="dugme" type="submit">Unesi knjigu</button>
+            
+        </form>
+        
+       <span>
+            {{message}}
+        </span> 
+    </div>
+
+    <div class="prazan">
+        &nbsp;
+        <br/>
+        <br/>
+    </div>
+
+</main>
+
+<!-- MENU -->
+<div class="nav">
+    <input type="checkbox" id="menu" (click)='prikaziPadajuciMeni()'>
+    <label for="menu" id = "nav-icon">&#9776;</label>
+
+</div>
+<div class="nav">
+    <input type="checkbox" id="menu" (click)='prikaziPadajuciMeni()'>
+    <label for="menu" id = "nav-icon">&#9776;</label>
+
+</div>
+<div *ngIf='prikazMenija==true' class="container">
+    <ul>
+        <li>
+            <a (click)="pocetnaStrana()">Pocetna&nbsp;strana</a>
+            
+        </li>
+        <li>
+            <a (click)="logOut()">Odjavi&nbsp;se</a>
+        </li>
+    </ul>
+</div>

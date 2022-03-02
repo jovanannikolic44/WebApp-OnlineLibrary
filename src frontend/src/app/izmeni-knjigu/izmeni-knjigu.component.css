@@ -1,0 +1,217 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+}
+/* MENI */
+.nav input[type="checkbox"] {
+    display: none;
+}
+
+/* pomeram meni */
+.nav {
+    position: absolute;
+    right:5% ;
+    width:180px;
+    top:0px;
+    padding: 10px;
+}
+
+#nav-icon {
+    font-size: 28px;
+    line-height: 50px;
+    padding-left: 1em;
+    color: black;
+}
+
+label {
+    width: 100%;
+    display: block;
+    z-index: 3;
+    position: relative;
+}
+
+
+.container li a:hover {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.container ul, .container li, label {
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-weight: 100;
+    width: 30%;
+    
+}
+
+.container ul {
+    
+    border-radius: 2px;
+}
+
+.container {
+    background-color: white;
+    position:absolute;
+    opacity: 0.7;
+    width:210px;
+    height:100px;
+    top:70px;
+    right:5%;
+    
+}
+.container li a {
+    line-height: 50px;
+    margin: 0;
+    padding: 0 0.25em;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+h2 {
+    padding: 10px;
+    color: black;
+    font-size: 25px;
+}
+
+.naslov {
+    position: absolute;
+    top:10px;
+    left:15%;
+
+}
+.sve {
+    display: flex;
+    background-color: white;
+    
+    opacity: 0.7;
+    border-bottom: 1px solid white;
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:70px;
+}
+
+
+/* FORMA */
+
+
+.dugme {
+    padding: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: white;
+    opacity: 0.8;
+    border: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;                    
+    position: relative;
+    transform: translateX(100px);
+    width: 90px;
+   
+}
+
+span {
+    position: absolute;
+    top: 100%;
+    color: white;
+    font-weight: bold;
+    transform: translateX(-60px);
+    opacity: 0.7;
+    font-size: 18px;
+}
+
+
+.imgDiv {
+    border-radius: 8px;
+    margin-right: 30px;
+}
+
+.imgDiv2 {
+    border-radius: 8px;
+    margin-right: 30px;
+    filter: brightness(40%);
+}
+
+.tabela {
+    position: absolute;
+    top: 120px;
+    left: 60px;
+    color: white;
+}
+
+
+
+.mojaForma {
+    position: absolute;
+    top: 190px;                           
+    right: 300px;
+    max-width: 300px;                   
+    color: grey;
+    opacity: 1;
+    font-weight: bold;
+    
+}
+
+.inputi {
+    opacity: 1;
+    padding: 8px;
+    margin-top: 7px;
+    width: 300px;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    border: none;
+}
+ 
+
+@media screen and (max-width: 1100px) {
+    .mojaForma {
+        right: 2px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .nav {
+        right:-10%;
+    }
+
+    .container {
+        right: -10%;
+    }
+
+    .naslov {
+        left: 2px;
+    }
+
+    .sve {
+        width: 110%;
+    }
+
+    .tabela {
+        left:0px;
+    }
+}
+
+
+@media screen and (max-width: 850px) {
+    .rel {
+        position: relative;
+    }
+    .mojaForma {
+        position: absolute;
+        left: 40px;
+        top: 1700px;
+    }
+  
+}

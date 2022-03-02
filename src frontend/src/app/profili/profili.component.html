@@ -1,0 +1,261 @@
+<main>
+    <div class="sve">      
+    </div>
+        
+    <div class="naslov">
+        Profil
+    </div>
+    
+    <!-- OPSTE INFORMACIJE -->
+    <div class="opsteInfoTabela">
+        <table>
+            <tr class="tr1">
+                <td *ngIf = 'korisnik.avatar == "bezSlike"' class="td1">
+                    <img src = "assets/profilepic4.jpg" width = '100' height = '100'class='imgDiv'>
+                </td>
+                 
+                <td *ngIf = 'korisnik.avatar != "bezSlike"' class="td1">
+                    <img [src]="korisnik.avatar" width = '150' height = '150' class='imgDiv'>
+                </td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">Ime: </td>
+                <td class="td1">{{korisnik.ime}}</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">Prezime: </td>
+                <td class="td1">{{korisnik.prezime}}</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">Datum rodjenja: </td>
+                <td class="td1">{{datumString}}</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">Grad:</td>
+                <td class="td1">{{korisnik.grad}}</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">Drzava:</td>
+                <td class="td1">{{korisnik.drzava}}</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">E-mail adresa:</td>
+                <td class="td1">{{korisnik.mail}}</td>
+            </tr>
+            <tr class="tr1">
+                <td class="td1">Aktivnost:</td>
+                <td class="td1">{{korisnik.stanjeAktivnosti}}</td>
+            </tr>
+        </table>
+        
+    </div>
+    
+    
+        <!-- PROCITANE KNJIGE -->
+        <h2 class="headerProc">
+            Procitane knjige
+        </h2>
+    
+        <div class="mat-elevation-z8" id="tabelaProc">
+            <table mat-table [dataSource]="proc">
+        
+            <ng-container matColumnDef="Naziv knjige" class="th3">
+                <th mat-header-cell *matHeaderCellDef class="td3"> Naziv knjige </th>
+                <td mat-cell *matCellDef="let element"> {{element.idKnjige.naziv}} </td>
+            </ng-container>
+        
+            
+            <ng-container matColumnDef="Autori">
+                <th mat-header-cell *matHeaderCellDef class="th3"> Autori </th>
+                <td mat-cell *matCellDef="let element" class="td3"> {{element.idKnjige.autori}} </td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        
+            <mat-paginator [length]="procitaneKnjige.length"
+                [pageSize]="2" [pageSizeOptions]="[2,4,6]" (page)="onPageChange($event)">
+    
+            </mat-paginator>
+        </div>
+    
+        <!-- KNJIGE KOJE SE TRENUTNO CITAJU -->
+        <h2 class="headerTr">
+            Trenutno se citaju
+        </h2>
+    
+        <div class="mat-elevation-z8" id="tabelaTr">
+            <table mat-table [dataSource]="trc">
+        
+            <ng-container matColumnDef="Naziv knjige">
+                <th mat-header-cell *matHeaderCellDef class="th2"> Naziv knjige </th>
+                <td mat-cell *matCellDef="let element" class="td2"> {{element.idKnjige.naziv}} </td>
+            </ng-container>
+        
+            
+            <ng-container matColumnDef="Autori">
+                <th mat-header-cell *matHeaderCellDef class="th2"> Autori </th>
+                <td mat-cell *matCellDef="let element" class="td2"> {{element.idKnjige.autori}} </td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        
+            <mat-paginator [length]="trenutnoSeCitaju.length"
+                [pageSize]="2" [pageSizeOptions]="[2,4,6]" (page)="onPageChange2($event)">
+    
+            </mat-paginator>
+        </div>
+    
+        <!-- KNJIGE KOJE SU NA LISTI -->
+        <h2 class="headerLista">
+            Na listi za citanje
+        </h2>
+    
+        <div class="mat-elevation-z8" id="tabelaLista">
+            <table mat-table [dataSource]="lista">
+        
+            <ng-container matColumnDef="Naziv knjige">
+                <th mat-header-cell *matHeaderCellDef class="th4"> Naziv knjige </th>
+                <td mat-cell *matCellDef="let element" class="td4"> {{element.idKnjige.naziv}} </td>
+            </ng-container>
+        
+            
+            <ng-container matColumnDef="Autori">
+                <th mat-header-cell *matHeaderCellDef class="th4"> Autori </th>
+                <td mat-cell *matCellDef="let element" class="td4"> {{element.idKnjige.autori}} </td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        
+            <mat-paginator [length]="naListi.length"
+                [pageSize]="2" [pageSizeOptions]="[2,4,6]" (page)="onPageChange3($event)">
+    
+            </mat-paginator>
+        </div>
+    
+    
+        <!-- JAVNA DESAVANJA -->
+        <h2 class="headerDes">
+            Javna desavanja
+        </h2>
+        
+        <div class="mat-elevation-z8" id="tabelaDes">
+            <table mat-table [dataSource]="javnaDesavanja">
+        
+            <ng-container matColumnDef="Naziv desavanja">
+                <th mat-header-cell *matHeaderCellDef> Naziv desavanja </th>
+                <td mat-cell *matCellDef="let element"> 
+                    {{element.naziv}} 
+                </td>
+            </ng-container>
+        
+            
+            <ng-container matColumnDef="Status">
+                <th mat-header-cell *matHeaderCellDef> Status </th>
+                <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+            </ng-container>
+        
+            <ng-container matColumnDef="Pocetak">
+                <th mat-header-cell *matHeaderCellDef> Pocetak </th>
+                <td mat-cell *matCellDef="let element"> {{element.pocetak}} </td>
+            </ng-container>
+        
+            <ng-container matColumnDef="Kraj">
+                <th mat-header-cell *matHeaderCellDef> Kraj </th>
+                <td mat-cell *matCellDef="let element"> {{element.kraj}} </td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns3"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns3;"></tr>
+            </table>
+        </div>
+    
+        <!-- KOMENTARI -->
+        <h2 class="headerKom">
+            Komentari
+        </h2>
+    
+        <div class="mat-elevation-z8" id="tabelaKom">
+            <table mat-table [dataSource]="koment">
+        
+            <ng-container matColumnDef="Naziv knjige">
+                <th mat-header-cell *matHeaderCellDef class="th5"> Naziv knjige </th>
+                <td mat-cell *matCellDef="let element" class="td5"> 
+                <a (click)="func(element)" class="newLinks"> {{element.idKnjige.naziv}} </a> 
+                </td>
+            </ng-container>
+        
+            
+            <ng-container matColumnDef="Autori">
+                <th mat-header-cell *matHeaderCellDef class="th5"> Autori </th>
+                <td mat-cell *matCellDef="let element" class="td5"> {{element.idKnjige.autori}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="Ocena">
+                <th mat-header-cell *matHeaderCellDef class="th5"> Ocena </th>
+                <td mat-cell *matCellDef="let element" class="td5"> {{element.Ocena}} </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="Komentar">
+                <th mat-header-cell *matHeaderCellDef class="th5"> Komentar </th>
+                <td mat-cell *matCellDef="let element" class="td5"> {{element.tekstKom}} </td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+            </table>
+        
+            <mat-paginator [length]="komentari.length"
+                [pageSize]="2" [pageSizeOptions]="[2,4,6]" (page)="onPageChange4($event)">
+    
+            </mat-paginator>
+        </div>        
+    
+        <div class="prazan">
+            &nbsp;
+            <br/>
+            <br/>
+        </div>
+    
+    </main>
+    
+    <!-- MENU -->
+    <div class="nav">
+        <input type="checkbox" id="menu" (click)='prikaziPadajuciMeni()'>
+        <label for="menu" id = "nav-icon">&#9776;</label>
+    
+    </div>
+    <div class="nav">
+        <input type="checkbox" id="menu" (click)='prikaziPadajuciMeni()'>
+        <label for="menu" id = "nav-icon">&#9776;</label>
+    
+    </div>
+    <div *ngIf='prikazMenija==true' class="container">
+        <ul>
+            <!-- ZA SVAKOG KORISNIKA -->
+            <li>
+                <a (click)="mojProfil()">Pocetna&nbsp;strana</a>
+            </li>
+            <li>
+                <a (click)="logOut()">Odjavi&nbsp;se</a>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- PIE CHART -->
+    
+    <div *ngIf="chartSpremna==true" class="chartPie">
+        <canvas
+            baseChart
+            [chartType]="'pie'"
+            [datasets]="chartPodaci"
+            [labels]="chartLabele"
+            [options]="chartOpcije"
+            [legend]="true">
+        </canvas>
+    </div>
