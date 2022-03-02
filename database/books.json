@@ -1,0 +1,432 @@
+{
+	"_id": {
+		"$oid": "5f6674bfbe3bca57cdf9d81f"
+	},
+	"naziv": "Dostojevski:biografija",
+	"autori": [
+		"Andreas Guski"
+	],
+	"datumIzdavanja": {
+		"$date": "2020-09-04T00:00:00Z"
+	},
+	"opis": "O zivotu Dostojevskog",
+	"prosecnaOcena": "9",
+	"brStrana": "440",
+	"status": "odobreno",
+	"urlSlike": "http://localhost:4000/urlSlike_1600551044288.jpg",
+	"idZanra": [
+		{
+			"$oid": "5f667405be3bca57cdf9d700"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f6679689e3fe15898d211f6"
+	},
+	"autori": [
+		"Ricard Manson"
+	],
+	"idZanra": [
+		{
+			"$oid": "5f667405be3bca57cdf9d700"
+		},
+		{
+			"$oid": "5f6677639e3fe15898d211e9"
+		}
+	],
+	"naziv": "Tesla:pronalazac modernog",
+	"datumIzdavanja": {
+		"$date": "2019-05-31T00:00:00Z"
+	},
+	"opis": "Stručno i detaljno istražena biografija briljantnog Nikole Tesle.",
+	"prosecnaOcena": 9.67,
+	"brStrana": "328",
+	"urlSlike": "http://localhost:4000/urlSlike_1600551272166.jpg",
+	"status": "odobreno",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f6679d89e3fe15898d211f7"
+	},
+	"autori": [
+		"Virzini Aladjidi",
+		" Karolin Pelisje"
+	],
+	"idZanra": [
+		{
+			"$oid": "5f66741fbe3bca57cdf9d73c"
+		},
+		{
+			"$oid": "5f66776c9e3fe15898d211ea"
+		}
+	],
+	"naziv": "Moja prva enciklopedija u slikama",
+	"datumIzdavanja": {
+		"$date": "2019-10-12T00:00:00Z"
+	},
+	"opis": "Više od 1000 reči i čitav jedan svet... u slikama!",
+	"prosecnaOcena": 10,
+	"brStrana": "94",
+	"urlSlike": "http://localhost:4000/urlSlike_1600551384269.jpg",
+	"status": "odobreno",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f667a399e3fe15898d211f8"
+	},
+	"autori": [
+		"Grupa autora"
+	],
+	"idZanra": [
+		{
+			"$oid": "5f66741fbe3bca57cdf9d73c"
+		},
+		{
+			"$oid": "5f66776c9e3fe15898d211ea"
+		}
+	],
+	"naziv": "Slikovni recnik zivotinja",
+	"datumIzdavanja": {
+		"$date": "2018-01-11T00:00:00Z"
+	},
+	"opis": "Slikovni rečnik životinja prepun je ilustracija sa propratnim tekstom, pa ćeš naučiti razne nazive životinja iz svih delova sveta.",
+	"prosecnaOcena": 0,
+	"brStrana": "128",
+	"urlSlike": "http://localhost:4000/urlSlike_1600551481195.jpg",
+	"status": "odobreno",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f667a879e3fe15898d211f9"
+	},
+	"autori": [
+		"Javor Rasajski"
+	],
+	"idZanra": [
+		{
+			"$oid": "5f66776c9e3fe15898d211ea"
+		}
+	],
+	"naziv": "Sve ptice Srbije",
+	"datumIzdavanja": {
+		"$date": "2017-10-24T00:00:00Z"
+	},
+	"opis": "Knjiga koju držite u rukama jedinstvena je i dragocena za svakoga ko voli čudesni svet prirode.",
+	"prosecnaOcena": 9,
+	"brStrana": "207",
+	"urlSlike": "http://localhost:4000/urlSlike_1600551559869.jpg",
+	"status": "odobreno",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f667ad69e3fe15898d211fa"
+	},
+	"autori": [
+		"Mihail Bulgakov"
+	],
+	"idZanra": [
+		{
+			"$oid": "5f66777b9e3fe15898d211eb"
+		}
+	],
+	"naziv": "Majstor i Margarita",
+	"datumIzdavanja": {
+		"$date": "2020-04-12T00:00:00Z"
+	},
+	"opis": "Rukopisi ne gore.",
+	"prosecnaOcena": 8.67,
+	"brStrana": "519",
+	"urlSlike": "http://localhost:4000/urlSlike_1600551638267.jpg",
+	"status": "odobreno",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f667d7d32727a09e0c8acf4"
+	},
+	"autori": [
+		"Meri Seli"
+	],
+	"idZanra": [
+		{
+			"$oid": "5f66777b9e3fe15898d211eb"
+		},
+		{
+			"$oid": "5f6677859e3fe15898d211ec"
+		}
+	],
+	"naziv": "Frankenstajn",
+	"datumIzdavanja": {
+		"$date": "2020-03-10T00:00:00Z"
+	},
+	"opis": "Prica o coveku koji je stvorio cudoviste",
+	"prosecnaOcena": 8,
+	"brStrana": "312",
+	"urlSlike": "http://localhost:4000/urlSlike_1600552317897.jpg",
+	"status": "odobreno",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f667e0532727a09e0c8acf5"
+	},
+	"autori": [
+		"Lusinda Rajli"
+	],
+	"idZanra": [
+		{
+			"$oid": "5f6677969e3fe15898d211ed"
+		},
+		{
+			"$oid": "5f66779a9e3fe15898d211ee"
+		}
+	],
+	"naziv": "Andjeosko drvo",
+	"datumIzdavanja": {
+		"$date": "2019-11-29T00:00:00Z"
+	},
+	"opis": "Očaravajuća priča o porodičnim tajnama i zaboravljenoj prošlosti",
+	"prosecnaOcena": 7,
+	"brStrana": "600",
+	"urlSlike": "http://localhost:4000/urlSlike_1600552453881.jpg",
+	"status": "odobreno",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f667e5e32727a09e0c8acf6"
+	},
+	"autori": [
+		"Trejsi Sevalije"
+	],
+	"idZanra": [
+		{
+			"$oid": "5f6677969e3fe15898d211ed"
+		},
+		{
+			"$oid": "5f66779a9e3fe15898d211ee"
+		}
+	],
+	"naziv": "Plameni sjaj",
+	"datumIzdavanja": {
+		"$date": "2007-09-09T00:00:00Z"
+	},
+	"opis": "Novi roman Trejsi Ševalije vrvi dramatikom.",
+	"prosecnaOcena": 0,
+	"brStrana": "336",
+	"urlSlike": "http://localhost:4000/urlSlike_1600552542127.jpg",
+	"status": "odobreno",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f667e9a32727a09e0c8acf7"
+	},
+	"autori": [
+		"Lusinda Rajli"
+	],
+	"idZanra": [
+		{
+			"$oid": "5f66779a9e3fe15898d211ee"
+		}
+	],
+	"naziv": "U senci masline",
+	"datumIzdavanja": {
+		"$date": "2019-05-17T00:00:00Z"
+	},
+	"opis": "Čudesna kuća. Nezaboravno leto.",
+	"prosecnaOcena": 0,
+	"brStrana": "512",
+	"urlSlike": "http://localhost:4000/urlSlike_1600552602034.jpg",
+	"status": "odobreno",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f667f2f32727a09e0c8acf8"
+	},
+	"autori": [
+		"Adrijan Cajkovski"
+	],
+	"idZanra": [
+		{
+			"$oid": "5f6677b89e3fe15898d211f0"
+		}
+	],
+	"naziv": "Deca propasti",
+	"datumIzdavanja": {
+		"$date": "2020-08-29T00:00:00Z"
+	},
+	"opis": "Čekalo je od pamtiveka. Sada je kucnuo čas...",
+	"prosecnaOcena": 7,
+	"brStrana": "488",
+	"urlSlike": "http://localhost:4000/urlSlike_1600552751252.jpg",
+	"status": "odobreno",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f667f7532727a09e0c8acf9"
+	},
+	"autori": [
+		"Dzejms S. A. Kori"
+	],
+	"idZanra": [
+		{
+			"$oid": "5f6677b89e3fe15898d211f0"
+		}
+	],
+	"naziv": "Uspon Persepolisa",
+	"datumIzdavanja": {
+		"$date": "2019-10-24T00:00:00Z"
+	},
+	"opis": "Stari neprijatelj se vraća.",
+	"prosecnaOcena": 0,
+	"brStrana": "592",
+	"urlSlike": "http://localhost:4000/urlSlike_1600552821373.jpg",
+	"status": "cekanje",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f667fbb32727a09e0c8acfa"
+	},
+	"autori": [
+		"Tomas Sulc"
+	],
+	"idZanra": [
+		{
+			"$oid": "5f6677639e3fe15898d211e9"
+		}
+	],
+	"naziv": "Medicina buducnosti",
+	"datumIzdavanja": {
+		"$date": "2020-07-21T00:00:00Z"
+	},
+	"opis": "Kako Silicijumska dolina namerava da ukloni bolesti i produži nam život",
+	"prosecnaOcena": 0,
+	"brStrana": "304",
+	"urlSlike": "http://localhost:4000/urlSlike_1600552891856.jpg",
+	"status": "cekanje",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f66806132727a09e0c8acfb"
+	},
+	"autori": [
+		"Piter V. Bret"
+	],
+	"idZanra": [
+		{
+			"$oid": "5f6677cb9e3fe15898d211f1"
+		}
+	],
+	"naziv": "Noc demona",
+	"datumIzdavanja": {
+		"$date": "2011-08-08T00:00:00Z"
+	},
+	"opis": "Vecita borba izmedju ljudi i demona. Vidi li joj se kraj?",
+	"prosecnaOcena": 10,
+	"brStrana": "475",
+	"urlSlike": "http://localhost:4000/urlSlike_1600553057952.jpg",
+	"status": "odobreno",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f6680e632727a09e0c8acfd"
+	},
+	"autori": [
+		"Harlan Koben"
+	],
+	"idZanra": [
+		{
+			"$oid": "5f6677ed9e3fe15898d211f3"
+		}
+	],
+	"naziv": "Decak iz sume",
+	"datumIzdavanja": {
+		"$date": "2020-09-15T00:00:00Z"
+	},
+	"opis": "Vajld je bio divlje dete kada ga pronasli, nicega se ne seca o svom zivotu",
+	"prosecnaOcena": 0,
+	"brStrana": "384",
+	"urlSlike": "default",
+	"status": "cekanje",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f670fc835173c03045f1408"
+	},
+	"autori": [
+		"Ivan Ivackovic"
+	],
+	"idZanra": [
+		{
+			"$oid": "5f670f5635173c03045f1407"
+		}
+	],
+	"naziv": "Umetnost pobude - The Rolling Stones",
+	"datumIzdavanja": {
+		"$date": "2020-08-07T00:00:00Z"
+	},
+	"opis": "Umetnost pobune je autorski potez najvišeg nivoa.",
+	"prosecnaOcena": 9.5,
+	"brStrana": "384",
+	"urlSlike": "http://localhost:4000/urlSlike_1600589768554.jpg",
+	"status": "odobreno",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f6678fc9e3fe15898d211f5"
+	},
+	"autori": [
+		"Volter Ajzakson"
+	],
+	"idZanra": [
+		{
+			"$oid": "5f667405be3bca57cdf9d700"
+		}
+	],
+	"naziv": "Leondardo da Vinci",
+	"datumIzdavanja": {
+		"$date": "2019-04-15T00:00:00Z"
+	},
+	"opis": "Da Vinci, najkreativniji genije otkad je sveta i veka.",
+	"prosecnaOcena": 9,
+	"brStrana": "464",
+	"urlSlike": "http://localhost:4000/urlSlike_1600551164187.jpg",
+	"status": "odobreno",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f6680a532727a09e0c8acfc"
+	},
+	"autori": [
+		"Ju Nesbe"
+	],
+	"idZanra": [
+		{
+			"$oid": "5f6677ed9e3fe15898d211f3"
+		}
+	],
+	"naziv": "Kraljevstvo",
+	"datumIzdavanja": {
+		"$date": "2020-09-17T00:00:00Z"
+	},
+	"opis": "Roj Opgard i dalje živi u mirnom planinskom gradu u kojem je odrastao, za razliku od svog mlađeg brata Karla, koji je jedva dočekao priliku da pobegne od svoje problematične prošlosti.",
+	"prosecnaOcena": 0,
+	"brStrana": "520",
+	"urlSlike": "default",
+	"status": "cekanje",
+	"__v": 0
+}

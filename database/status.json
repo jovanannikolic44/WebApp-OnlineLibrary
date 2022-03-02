@@ -1,0 +1,576 @@
+{
+	"_id": {
+		"$oid": "5f667500be3bca57cdf9d8a0"
+	},
+	"idKnjige": {
+		"$oid": "5f6674bfbe3bca57cdf9d81f"
+	},
+	"idKor": {
+		"$oid": "5f3380c89124031a8c9ef63a"
+	},
+	"statusCitanja": "procitao",
+	"brProcitanihStrana": "440",
+	"idZanra": [
+		{
+			"$oid": "5f667405be3bca57cdf9d700"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f67106e44d8a687d3ad9fef"
+	},
+	"idKor": {
+		"$oid": "5f3380c89124031a8c9ef63a"
+	},
+	"statusCitanja": "procitao",
+	"idKnjige": {
+		"$oid": "5f6679689e3fe15898d211f6"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f667405be3bca57cdf9d700"
+		},
+		{
+			"$oid": "5f6677639e3fe15898d211e9"
+		}
+	],
+	"brProcitanihStrana": "328"
+}
+{
+	"_id": {
+		"$oid": "5f67107f44d8a687d3ad9ffa"
+	},
+	"idKor": {
+		"$oid": "5f3380c89124031a8c9ef63a"
+	},
+	"statusCitanja": "procitao",
+	"idKnjige": {
+		"$oid": "5f66806132727a09e0c8acfb"
+	},
+	"brProcitanihStrana": "475",
+	"idZanra": [
+		{
+			"$oid": "5f6677cb9e3fe15898d211f1"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f67108a44d8a687d3ada005"
+	},
+	"idKor": {
+		"$oid": "5f3380c89124031a8c9ef63a"
+	},
+	"statusCitanja": "procitao",
+	"idKnjige": {
+		"$oid": "5f667ad69e3fe15898d211fa"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f66777b9e3fe15898d211eb"
+		}
+	],
+	"brProcitanihStrana": "519"
+}
+{
+	"_id": {
+		"$oid": "5f67109044d8a687d3ada00a"
+	},
+	"idKor": {
+		"$oid": "5f3380c89124031a8c9ef63a"
+	},
+	"statusCitanja": "naListi",
+	"brProcitanihStrana": "0",
+	"idKnjige": {
+		"$oid": "5f667e5e32727a09e0c8acf6"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f6677969e3fe15898d211ed"
+		},
+		{
+			"$oid": "5f66779a9e3fe15898d211ee"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f67109544d8a687d3ada011"
+	},
+	"idKor": {
+		"$oid": "5f3380c89124031a8c9ef63a"
+	},
+	"statusCitanja": "naListi",
+	"brProcitanihStrana": "0",
+	"idKnjige": {
+		"$oid": "5f667e9a32727a09e0c8acf7"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f66779a9e3fe15898d211ee"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f67109c44d8a687d3ada018"
+	},
+	"idKor": {
+		"$oid": "5f3380c89124031a8c9ef63a"
+	},
+	"statusCitanja": "cita",
+	"idKnjige": {
+		"$oid": "5f667d7d32727a09e0c8acf4"
+	},
+	"brProcitanihStrana": "100",
+	"idZanra": [
+		{
+			"$oid": "5f66777b9e3fe15898d211eb"
+		},
+		{
+			"$oid": "5f6677859e3fe15898d211ec"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f6710a144d8a687d3ada01d"
+	},
+	"idKor": {
+		"$oid": "5f3380c89124031a8c9ef63a"
+	},
+	"statusCitanja": "cita",
+	"brProcitanihStrana": "400",
+	"idKnjige": {
+		"$oid": "5f6678fc9e3fe15898d211f5"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f667405be3bca57cdf9d700"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f67149644d8a687d3ada579"
+	},
+	"idKor": {
+		"$oid": "5f3381059124031a8c9ef63b"
+	},
+	"statusCitanja": "procitao",
+	"idKnjige": {
+		"$oid": "5f6679d89e3fe15898d211f7"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f66741fbe3bca57cdf9d73c"
+		},
+		{
+			"$oid": "5f66776c9e3fe15898d211ea"
+		}
+	],
+	"brProcitanihStrana": "94"
+}
+{
+	"_id": {
+		"$oid": "5f6714b244d8a687d3ada5b1"
+	},
+	"idKor": {
+		"$oid": "5f3381059124031a8c9ef63b"
+	},
+	"statusCitanja": "procitao",
+	"idKnjige": {
+		"$oid": "5f667e0532727a09e0c8acf5"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f6677969e3fe15898d211ed"
+		},
+		{
+			"$oid": "5f66779a9e3fe15898d211ee"
+		}
+	],
+	"brProcitanihStrana": "600"
+}
+{
+	"_id": {
+		"$oid": "5f6714bd44d8a687d3ada5c2"
+	},
+	"idKor": {
+		"$oid": "5f3381059124031a8c9ef63b"
+	},
+	"statusCitanja": "procitao",
+	"brProcitanihStrana": "328",
+	"idKnjige": {
+		"$oid": "5f6679689e3fe15898d211f6"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f667405be3bca57cdf9d700"
+		},
+		{
+			"$oid": "5f6677639e3fe15898d211e9"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f6714cd44d8a687d3ada5d5"
+	},
+	"idKor": {
+		"$oid": "5f3381059124031a8c9ef63b"
+	},
+	"statusCitanja": "cita",
+	"brProcitanihStrana": "200",
+	"idKnjige": {
+		"$oid": "5f667e9a32727a09e0c8acf7"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f66779a9e3fe15898d211ee"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f6714d344d8a687d3ada5e0"
+	},
+	"idKor": {
+		"$oid": "5f3381059124031a8c9ef63b"
+	},
+	"statusCitanja": "cita",
+	"brProcitanihStrana": "300",
+	"idKnjige": {
+		"$oid": "5f670fc835173c03045f1408"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f670f5635173c03045f1407"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f6714d744d8a687d3ada5ed"
+	},
+	"idKor": {
+		"$oid": "5f3381059124031a8c9ef63b"
+	},
+	"statusCitanja": "cita",
+	"brProcitanihStrana": "200",
+	"idKnjige": {
+		"$oid": "5f667a879e3fe15898d211f9"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f66776c9e3fe15898d211ea"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f6714ea44d8a687d3ada617"
+	},
+	"idKor": {
+		"$oid": "5f3381059124031a8c9ef63b"
+	},
+	"statusCitanja": "naListi",
+	"brProcitanihStrana": "0",
+	"idKnjige": {
+		"$oid": "5f667d7d32727a09e0c8acf4"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f66777b9e3fe15898d211eb"
+		},
+		{
+			"$oid": "5f6677859e3fe15898d211ec"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f67187b44d8a687d3adadc0"
+	},
+	"idKor": {
+		"$oid": "5f6668f657cdf947102cfd4e"
+	},
+	"statusCitanja": "procitao",
+	"idKnjige": {
+		"$oid": "5f670fc835173c03045f1408"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f670f5635173c03045f1407"
+		}
+	],
+	"brProcitanihStrana": "384"
+}
+{
+	"_id": {
+		"$oid": "5f67188344d8a687d3adadd8"
+	},
+	"idKor": {
+		"$oid": "5f6668f657cdf947102cfd4e"
+	},
+	"statusCitanja": "procitao",
+	"brProcitanihStrana": "519",
+	"idKnjige": {
+		"$oid": "5f667ad69e3fe15898d211fa"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f66777b9e3fe15898d211eb"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f67188d44d8a687d3adade8"
+	},
+	"idKor": {
+		"$oid": "5f6668f657cdf947102cfd4e"
+	},
+	"statusCitanja": "cita",
+	"brProcitanihStrana": "200",
+	"idKnjige": {
+		"$oid": "5f66806132727a09e0c8acfb"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f6677cb9e3fe15898d211f1"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f6718a244d8a687d3adae30"
+	},
+	"idKor": {
+		"$oid": "5f6668f657cdf947102cfd4e"
+	},
+	"statusCitanja": "cita",
+	"brProcitanihStrana": "200",
+	"idKnjige": {
+		"$oid": "5f667e0532727a09e0c8acf5"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f6677969e3fe15898d211ed"
+		},
+		{
+			"$oid": "5f66779a9e3fe15898d211ee"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f6718ad44d8a687d3adae44"
+	},
+	"idKor": {
+		"$oid": "5f6668f657cdf947102cfd4e"
+	},
+	"statusCitanja": "naListi",
+	"brProcitanihStrana": "0",
+	"idKnjige": {
+		"$oid": "5f6674bfbe3bca57cdf9d81f"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f667405be3bca57cdf9d700"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f6718b244d8a687d3adae51"
+	},
+	"idKor": {
+		"$oid": "5f6668f657cdf947102cfd4e"
+	},
+	"statusCitanja": "naListi",
+	"brProcitanihStrana": "0",
+	"idKnjige": {
+		"$oid": "5f667a399e3fe15898d211f8"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f66741fbe3bca57cdf9d73c"
+		},
+		{
+			"$oid": "5f66776c9e3fe15898d211ea"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f671ac744d8a687d3adb4aa"
+	},
+	"idKnjige": {
+		"$oid": "5f667d7d32727a09e0c8acf4"
+	},
+	"statusCitanja": "procitao",
+	"idZanra": [
+		{
+			"$oid": "5f66777b9e3fe15898d211eb"
+		},
+		{
+			"$oid": "5f6677859e3fe15898d211ec"
+		}
+	],
+	"brProcitanihStrana": "312",
+	"idKor": {
+		"$oid": "5f666bd657cdf947102cfd51"
+	}
+}
+{
+	"_id": {
+		"$oid": "5f671b1444d8a687d3adb5ca"
+	},
+	"idKnjige": {
+		"$oid": "5f667f2f32727a09e0c8acf8"
+	},
+	"statusCitanja": "cita",
+	"idZanra": [
+		{
+			"$oid": "5f6677b89e3fe15898d211f0"
+		}
+	],
+	"brProcitanihStrana": "360",
+	"idKor": {
+		"$oid": "5f666bd657cdf947102cfd51"
+	}
+}
+{
+	"_id": {
+		"$oid": "5f671b2144d8a687d3adb5eb"
+	},
+	"idKnjige": {
+		"$oid": "5f667e5e32727a09e0c8acf6"
+	},
+	"statusCitanja": "cita",
+	"idZanra": [
+		{
+			"$oid": "5f6677969e3fe15898d211ed"
+		},
+		{
+			"$oid": "5f66779a9e3fe15898d211ee"
+		}
+	],
+	"brProcitanihStrana": "100",
+	"idKor": {
+		"$oid": "5f666bd657cdf947102cfd51"
+	}
+}
+{
+	"_id": {
+		"$oid": "5f671b3c44d8a687d3adb64c"
+	},
+	"idKnjige": {
+		"$oid": "5f66806132727a09e0c8acfb"
+	},
+	"statusCitanja": "naListi",
+	"idZanra": [
+		{
+			"$oid": "5f6677cb9e3fe15898d211f1"
+		}
+	],
+	"brProcitanihStrana": "0",
+	"idKor": {
+		"$oid": "5f666bd657cdf947102cfd51"
+	}
+}
+{
+	"_id": {
+		"$oid": "5f671c3644d8a687d3adba0d"
+	},
+	"idKor": {
+		"$oid": "5f666c1f57cdf947102cfd52"
+	},
+	"statusCitanja": "procitao",
+	"brProcitanihStrana": "464",
+	"idKnjige": {
+		"$oid": "5f6678fc9e3fe15898d211f5"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f667405be3bca57cdf9d700"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f671c4044d8a687d3adba42"
+	},
+	"idKor": {
+		"$oid": "5f666c1f57cdf947102cfd52"
+	},
+	"statusCitanja": "procitao",
+	"brProcitanihStrana": "328",
+	"idKnjige": {
+		"$oid": "5f6679689e3fe15898d211f6"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f667405be3bca57cdf9d700"
+		},
+		{
+			"$oid": "5f6677639e3fe15898d211e9"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f671c4444d8a687d3adba53"
+	},
+	"idKor": {
+		"$oid": "5f666c1f57cdf947102cfd52"
+	},
+	"statusCitanja": "procitao",
+	"idKnjige": {
+		"$oid": "5f6674bfbe3bca57cdf9d81f"
+	},
+	"brProcitanihStrana": "440",
+	"idZanra": [
+		{
+			"$oid": "5f667405be3bca57cdf9d700"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f671c4944d8a687d3adba5e"
+	},
+	"idKor": {
+		"$oid": "5f666c1f57cdf947102cfd52"
+	},
+	"statusCitanja": "cita",
+	"brProcitanihStrana": "400",
+	"idKnjige": {
+		"$oid": "5f667ad69e3fe15898d211fa"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f66777b9e3fe15898d211eb"
+		}
+	]
+}
+{
+	"_id": {
+		"$oid": "5f671c5a44d8a687d3adba97"
+	},
+	"idKor": {
+		"$oid": "5f666c1f57cdf947102cfd52"
+	},
+	"statusCitanja": "naListi",
+	"brProcitanihStrana": "0",
+	"idKnjige": {
+		"$oid": "5f667a879e3fe15898d211f9"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f66776c9e3fe15898d211ea"
+		}
+	]
+}

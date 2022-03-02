@@ -1,0 +1,160 @@
+{
+	"_id": {
+		"$oid": "5f3380c89124031a8c9ef63a"
+	},
+	"ime": "Jelena",
+	"prezime": "Jovanovic",
+	"username": "jelena",
+	"password": "Jelena123!",
+	"grad": "Subotica",
+	"drzava": "Srbija",
+	"mail": "jelena@gmail.com",
+	"datumRodjenja": {
+		"$date": "1998-04-04T00:00:00Z"
+	},
+	"status": "odobreno",
+	"stanjeAktivnosti": "9/20/2020, 2:39:52 PM",
+	"avatar": "http://localhost:4000/avatar_1600548329018.jpg",
+	"tip": "admin",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f3381059124031a8c9ef63b"
+	},
+	"ime": "Nenad",
+	"prezime": "Nenadic",
+	"username": "nenad",
+	"password": "Nenad123!",
+	"grad": "Nis",
+	"drzava": "Srbija",
+	"mail": "nenad@gmail.com",
+	"datumRodjenja": {
+		"$date": "1997-02-03T00:00:00Z"
+	},
+	"status": "odobreno",
+	"stanjeAktivnosti": "9/20/2020, 2:40:04 PM",
+	"tip": "moderator",
+	"avatar": "http://localhost:4000/avatar_1600548533980.jpg",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f6668f657cdf947102cfd4e"
+	},
+	"ime": "Milos",
+	"prezime": "Misic",
+	"username": "milos",
+	"password": "Milos123!",
+	"grad": "Beograd",
+	"drzava": "Srbija",
+	"mail": "milos123@gmail.com",
+	"datumRodjenja": {
+		"$date": "1993-02-14T00:00:00Z"
+	},
+	"status": "odobreno",
+	"stanjeAktivnosti": "9/20/2020, 2:37:02 PM",
+	"tip": "korisnik",
+	"avatar": "http://localhost:4000/avatar_1600548604059.jpeg",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f666bd657cdf947102cfd51"
+	},
+	"ime": "Anja",
+	"prezime": "Antic",
+	"username": "anja",
+	"password": "Anja123#!",
+	"grad": "Novi Sad",
+	"drzava": "Srbija",
+	"mail": "anja123@gmail.com",
+	"datumRodjenja": {
+		"$date": "1996-09-04T00:00:00Z"
+	},
+	"status": "odobreno",
+	"stanjeAktivnosti": "9/20/2020, 2:37:52 PM",
+	"tip": "korisnik",
+	"avatar": "http://localhost:4000/avatar_1600547798627.jpg",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f666c1f57cdf947102cfd52"
+	},
+	"ime": "Dusan",
+	"prezime": "Peric",
+	"username": "dusan",
+	"password": "Dule123!456",
+	"grad": "Nis",
+	"drzava": "Srbija",
+	"mail": "dule@gmail.com",
+	"datumRodjenja": {
+		"$date": "1996-12-08T00:00:00Z"
+	},
+	"status": "odobreno",
+	"stanjeAktivnosti": "9/20/2020, 2:39:04 PM",
+	"tip": "korisnik",
+	"avatar": "http://localhost:4000/avatar_1600547871527.jpeg",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f666ccf57cdf947102cfd53"
+	},
+	"ime": "Petar",
+	"prezime": "Peric",
+	"username": "pera",
+	"password": "Pera123!#",
+	"grad": "Leskovac",
+	"drzava": "Srbija",
+	"mail": "pera@gmail.com",
+	"datumRodjenja": {
+		"$date": "1991-02-22T00:00:00Z"
+	},
+	"status": "cekanje",
+	"stanjeAktivnosti": "nije aktivan",
+	"tip": "korisnik",
+	"avatar": "bezSlike",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f666d3557cdf947102cfd54"
+	},
+	"ime": "Lena",
+	"prezime": "Milovanovic",
+	"username": "lena",
+	"password": "L123!ena123",
+	"grad": "Kragujevac",
+	"drzava": "Srbija",
+	"mail": "lena@gmail.com",
+	"datumRodjenja": {
+		"$date": "1997-08-08T00:00:00Z"
+	},
+	"status": "cekanje",
+	"stanjeAktivnosti": "nije aktivan",
+	"tip": "korisnik",
+	"avatar": "http://localhost:4000/avatar_1600548149530.jpg",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f666d7a57cdf947102cfd55"
+	},
+	"ime": "Milan",
+	"prezime": "Petric",
+	"username": "milan",
+	"password": "Milan123!",
+	"grad": "Kraljevo",
+	"drzava": "Srbija",
+	"mail": "milan@gmail.com",
+	"datumRodjenja": {
+		"$date": "1996-07-07T00:00:00Z"
+	},
+	"status": "cekanje",
+	"stanjeAktivnosti": "nije aktivan",
+	"tip": "korisnik",
+	"avatar": "bezSlike",
+	"__v": 0
+}

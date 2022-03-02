@@ -1,0 +1,36 @@
+{
+	"_id": {
+		"$oid": "5f377de721b1c120d271655d"
+	},
+	"naziv": "Knjizevno vece",
+	"status": "buduce",
+	"pocetak": "2020-11-21 18:00:00",
+	"kraj": "2020-11-21 21:00:00"
+}
+{
+	"_id": {
+		"$oid": "5f377e2321b1c120d271659a"
+	},
+	"naziv": "Dan knjiga",
+	"status": "aktivno",
+	"pocetak": "2020-09-15 16:00:00",
+	"kraj": "2020-09-27 20:00:00"
+}
+{
+	"_id": {
+		"$oid": "5f377e4321b1c120d27165bd"
+	},
+	"naziv": "Sajam knjiga 2020",
+	"status": "buduce",
+	"pocetak": "2020-10-20 10:00:00",
+	"kraj": "2020-10-26 19:00:00"
+}
+{
+	"_id": {
+		"$oid": "5f377e6621b1c120d27165e2"
+	},
+	"naziv": "Sajam knjiga 2019",
+	"status": "proslo",
+	"pocetak": "2019-10-19 10:00:00",
+	"kraj": "2019-10-24 19:00:00"
+}

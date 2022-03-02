@@ -1,0 +1,98 @@
+{
+	"_id": {
+		"$oid": "5f667405be3bca57cdf9d700"
+	},
+	"zanr": "biografija",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f66741fbe3bca57cdf9d73c"
+	},
+	"zanr": "knjige za decu",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f6677639e3fe15898d211e9"
+	},
+	"zanr": "popularna nauka",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f66776c9e3fe15898d211ea"
+	},
+	"zanr": "enciklopedija",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f66777b9e3fe15898d211eb"
+	},
+	"zanr": "klasik",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f6677859e3fe15898d211ec"
+	},
+	"zanr": "horor",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f6677969e3fe15898d211ed"
+	},
+	"zanr": "drama",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f66779a9e3fe15898d211ee"
+	},
+	"zanr": "ljubavni",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f6677b89e3fe15898d211f0"
+	},
+	"zanr": "naucna fantastika",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f6677cb9e3fe15898d211f1"
+	},
+	"zanr": "epska fantastika",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f6677ed9e3fe15898d211f3"
+	},
+	"zanr": "trileri",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f66780f9e3fe15898d211f4"
+	},
+	"zanr": "kuvari",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f670f5635173c03045f1407"
+	},
+	"zanr": "muzika",
+	"__v": 0
+}
+{
+	"_id": {
+		"$oid": "5f67361c8d1d7f0b5498d36b"
+	},
+	"zanr": "avanturisticki",
+	"__v": 0
+}

@@ -1,0 +1,324 @@
+{
+	"_id": {
+		"$oid": "5f67219a44d8a687d3adcfa7"
+	},
+	"idKor": {
+		"$oid": "5f3380c89124031a8c9ef63a"
+	},
+	"idKnjige": {
+		"$oid": "5f6679689e3fe15898d211f6"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f667405be3bca57cdf9d700"
+		},
+		{
+			"$oid": "5f6677639e3fe15898d211e9"
+		}
+	],
+	"Ocena": "10",
+	"tekstKom": "Knjiga za svaku preporuku!"
+}
+{
+	"_id": {
+		"$oid": "5f6721fe44d8a687d3add180"
+	},
+	"idKor": {
+		"$oid": "5f3380c89124031a8c9ef63a"
+	},
+	"idKnjige": {
+		"$oid": "5f6678fc9e3fe15898d211f5"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f667405be3bca57cdf9d700"
+		}
+	],
+	"Ocena": "9",
+	"tekstKom": "Odlicna biografija sa prikazanim Leonardovim slikama"
+}
+{
+	"_id": {
+		"$oid": "5f67224b44d8a687d3add301"
+	},
+	"idKor": {
+		"$oid": "5f3380c89124031a8c9ef63a"
+	},
+	"idKnjige": {
+		"$oid": "5f667ad69e3fe15898d211fa"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f66777b9e3fe15898d211eb"
+		}
+	],
+	"Ocena": "8",
+	"tekstKom": "Odlicno napisana knjiga"
+}
+{
+	"_id": {
+		"$oid": "5f67227f44d8a687d3add406"
+	},
+	"idKor": {
+		"$oid": "5f3380c89124031a8c9ef63a"
+	},
+	"idKnjige": {
+		"$oid": "5f66806132727a09e0c8acfb"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f6677cb9e3fe15898d211f1"
+		}
+	],
+	"Ocena": "10",
+	"tekstKom": "Odlicna knjiga za ljubitelje epske fantastike"
+}
+{
+	"_id": {
+		"$oid": "5f6724e344d8a687d3addf8c"
+	},
+	"idKor": {
+		"$oid": "5f3381059124031a8c9ef63b"
+	},
+	"idKnjige": {
+		"$oid": "5f6679d89e3fe15898d211f7"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f66741fbe3bca57cdf9d73c"
+		},
+		{
+			"$oid": "5f66776c9e3fe15898d211ea"
+		}
+	],
+	"Ocena": "10",
+	"tekstKom": "Odlicna knjiga za decu!"
+}
+{
+	"_id": {
+		"$oid": "5f67253044d8a687d3ade128"
+	},
+	"idKor": {
+		"$oid": "5f3381059124031a8c9ef63b"
+	},
+	"idKnjige": {
+		"$oid": "5f667e0532727a09e0c8acf5"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f6677969e3fe15898d211ed"
+		},
+		{
+			"$oid": "5f66779a9e3fe15898d211ee"
+		}
+	],
+	"Ocena": "7",
+	"tekstKom": "Ocekivao sam vise, ali vredi procitati"
+}
+{
+	"_id": {
+		"$oid": "5f67257d44d8a687d3ade2c6"
+	},
+	"idKor": {
+		"$oid": "5f3381059124031a8c9ef63b"
+	},
+	"idKnjige": {
+		"$oid": "5f6679689e3fe15898d211f6"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f667405be3bca57cdf9d700"
+		},
+		{
+			"$oid": "5f6677639e3fe15898d211e9"
+		}
+	],
+	"Ocena": "10",
+	"tekstKom": "Odlicna knjiga o zivotu i radu Nikole Tesle"
+}
+{
+	"_id": {
+		"$oid": "5f6725d944d8a687d3ade4d2"
+	},
+	"idKor": {
+		"$oid": "5f3381059124031a8c9ef63b"
+	},
+	"idKnjige": {
+		"$oid": "5f670fc835173c03045f1408"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f670f5635173c03045f1407"
+		}
+	],
+	"Ocena": "9",
+	"tekstKom": "Preporucujem ovu knjigu"
+}
+{
+	"_id": {
+		"$oid": "5f67260f44d8a687d3ade5f8"
+	},
+	"idKor": {
+		"$oid": "5f3381059124031a8c9ef63b"
+	},
+	"idKnjige": {
+		"$oid": "5f667a879e3fe15898d211f9"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f66776c9e3fe15898d211ea"
+		}
+	],
+	"Ocena": "9",
+	"tekstKom": "Sjajna knjiga za sve ljubitelje ptica!"
+}
+{
+	"_id": {
+		"$oid": "5f67282744d8a687d3adf255"
+	},
+	"idKor": {
+		"$oid": "5f6668f657cdf947102cfd4e"
+	},
+	"idKnjige": {
+		"$oid": "5f667ad69e3fe15898d211fa"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f66777b9e3fe15898d211eb"
+		}
+	],
+	"Ocena": "10",
+	"tekstKom": "Knjiga koja zasluzeno spada u klasike svetske knjizevnosti"
+}
+{
+	"_id": {
+		"$oid": "5f67286944d8a687d3adf3de"
+	},
+	"idKor": {
+		"$oid": "5f6668f657cdf947102cfd4e"
+	},
+	"idKnjige": {
+		"$oid": "5f670fc835173c03045f1408"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f670f5635173c03045f1407"
+		}
+	],
+	"Ocena": "10",
+	"tekstKom": "Odusevljen sam knjigom. Preporucujem svima da je procitaju"
+}
+{
+	"_id": {
+		"$oid": "5f6728e844d8a687d3adf6f6"
+	},
+	"idKnjige": {
+		"$oid": "5f667d7d32727a09e0c8acf4"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f66777b9e3fe15898d211eb"
+		},
+		{
+			"$oid": "5f6677859e3fe15898d211ec"
+		}
+	],
+	"idKor": {
+		"$oid": "5f666bd657cdf947102cfd51"
+	},
+	"Ocena": "8",
+	"tekstKom": "Prava knjiga za ljubitelje horora"
+}
+{
+	"_id": {
+		"$oid": "5f67295f44d8a687d3adf9a2"
+	},
+	"idKnjige": {
+		"$oid": "5f667f2f32727a09e0c8acf8"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f6677b89e3fe15898d211f0"
+		}
+	],
+	"idKor": {
+		"$oid": "5f666bd657cdf947102cfd51"
+	},
+	"Ocena": "7",
+	"tekstKom": "Nije losa knjiga, svidece se onom ko voli naucnu fantastiku"
+}
+{
+	"_id": {
+		"$oid": "5f672a1344d8a687d3adfe19"
+	},
+	"idKor": {
+		"$oid": "5f666c1f57cdf947102cfd52"
+	},
+	"idKnjige": {
+		"$oid": "5f6678fc9e3fe15898d211f5"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f667405be3bca57cdf9d700"
+		}
+	],
+	"Ocena": "9",
+	"tekstKom": "Odlicna knjiga"
+}
+{
+	"_id": {
+		"$oid": "5f672a4e44d8a687d3adff6b"
+	},
+	"idKor": {
+		"$oid": "5f666c1f57cdf947102cfd52"
+	},
+	"idKnjige": {
+		"$oid": "5f6679689e3fe15898d211f6"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f667405be3bca57cdf9d700"
+		},
+		{
+			"$oid": "5f6677639e3fe15898d211e9"
+		}
+	],
+	"Ocena": "9",
+	"tekstKom": "Odlicno docaran zivot Nikole Tesle. Knjiga koja je obavezna za citanje"
+}
+{
+	"_id": {
+		"$oid": "5f672aa444d8a687d3ae0166"
+	},
+	"idKor": {
+		"$oid": "5f666c1f57cdf947102cfd52"
+	},
+	"idKnjige": {
+		"$oid": "5f6674bfbe3bca57cdf9d81f"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f667405be3bca57cdf9d700"
+		}
+	],
+	"Ocena": "9",
+	"tekstKom": "Odlicna knjiga o Dostojevskom"
+}
+{
+	"_id": {
+		"$oid": "5f672c0844d8a687d3ae09e8"
+	},
+	"tekstKom": "Knjiga nas vraca u vreme Pontija Pilata, a uporedo prati i desavanja u sadasnjosti u Moskvi",
+	"Ocena": "8",
+	"idKor": {
+		"$oid": "5f666c1f57cdf947102cfd52"
+	},
+	"idKnjige": {
+		"$oid": "5f667ad69e3fe15898d211fa"
+	},
+	"idZanra": [
+		{
+			"$oid": "5f66777b9e3fe15898d211eb"
+		}
+	]
+}
