@@ -18,6 +18,7 @@ There are three lists:
 - List for read books
 - List for currently reading books
 - Waiting list for books
+
 Registered user can also add new books to the library.
 
 Moderator has all privileges as registered user and one more. He can approve books.
