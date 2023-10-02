@@ -15,9 +15,9 @@ Guests have limited access to the library. They can search books and review book
 Registered user has his profile with his data and profile picture. Users can search books and other profiles, review book page, comment on book page, see other
 comments and add books to the lists.
 There are three lists: 
-- List for read books
-- List for currently reading books
-- Waiting list for books
+- List of read books
+- List of currently reading books
+- Waiting list of books
 
 Registered user can also add new books to the library.
 
